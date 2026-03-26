@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Do in Toulouse 2026 | The Pink City & Space Hub</title>
+    <meta name="description" content="Discover Toulouse 2026: La Ville Rose. Top 10 attractions, Cité de l'Espace, and authentic gastronomy itineraries.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --bg-dark: #0f172a;
+            --accent-blue: #60a5fa;
+            --accent-gold: #fbbf24;
+            --accent-green: #4ade80;
+            --text-light: #f1f5f9;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body { margin: 0; font-family: 'Roboto', sans-serif; color: var(--text-light); background: var(--bg-dark); line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* --- NAVIGATION --- */
+        nav { 
+            position: fixed; top: 0; width: 100%; height: 70px; 
+            background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); 
+            z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); 
+            display: flex; align-items: center; justify-content: space-between; 
+            padding: 0 5%; box-sizing: border-box; 
+        }
+        .logo-nav { font-family: 'Poppins'; font-weight: 700; color: #fff; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; align-items: center; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent-blue); }
+
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn { background: none; border: none; color: #fff; font-family: inherit; font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 5px; height: 70px; }
+        .dropdown-content { display: none; position: absolute; background-color: #1e293b; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); border-radius: 12px; overflow: hidden; top: 70px; right: 0; border: 1px solid rgba(255,255,255,0.1); }
+        .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
+        .dropdown-content a:hover { background-color: var(--accent-blue); }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        /* --- HERO --- */
+        .hero { 
+            height: 50vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,1)), 
+                        url('https://images.unsplash.com/photo-1741297156643-a6b269d7c3b4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+            background-size: cover; 
+            background-position: center; 
+            text-align: center; 
+            padding-top: 70px;
+        }
+        .hero h1 { font-family: 'Poppins'; font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; color: var(--accent-blue); margin-top: 10px; font-weight: 500; }
+        
+        /* --- CONTAINER --- */
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+        h2 { font-family: 'Poppins'; font-size: 2rem; border-left: 5px solid var(--accent-blue); padding-left: 20px; margin: 60px 0 30px; text-transform: uppercase; }
+        .gastro-h2 { border-color: var(--accent-gold); }
+
+        /* --- GRID CARDS --- */
+        .grid-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+        .card { 
+            background: var(--glass); border-radius: 15px; padding: 20px; 
+            border: 1px solid rgba(255,255,255,0.1); transition: 0.4s ease; 
+            display: flex; flex-direction: column; justify-content: space-between; font-size: 0.9rem;
+        }
+        .card-place:hover { border-color: var(--accent-blue); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(96, 165, 250, 0.1); }
+        .card-place h3 { color: var(--accent-blue); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .card-gastro { border: 1px solid rgba(251, 191, 36, 0.1); }
+        .card-gastro:hover { border-color: var(--accent-gold); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(251, 191, 36, 0.1); }
+        .card-gastro h3 { color: var(--accent-gold); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .pro-tip { font-size: 0.8rem; color: #94a3b8; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); font-style: italic; }
+
+        /* --- ITINERARIES --- */
+        .itinerary-box { background: rgba(255, 255, 255, 0.02); border-radius: 20px; padding: 30px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .day-label { color: var(--accent-gold); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; }
+
+        /* --- BOOKING SECTION --- */
+        .booking-section { background: rgba(30, 41, 59, 0.5); border-radius: 20px; padding: 40px; border: 1px solid var(--accent-blue); margin: 80px 0 40px; text-align: center; }
+        .booking-section h2 { border-left: none; padding-left: 0; margin-top: 0; }
+        .booking-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px; }
+        .booking-card { background: rgba(15, 23, 42, 0.5); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); }
+        .booking-card h4 { margin-top: 0; font-family: 'Poppins'; color: #fff; }
+        .book-btn { 
+            display: block; width: 100%; padding: 12px; text-align: center; text-decoration: none; 
+            border-radius: 8px; font-weight: 700; margin-top: 15px; transition: 0.3s; box-sizing: border-box;
+        }
+        .btn-budget { background: var(--accent-green); color: #000; }
+        .btn-mid { background: var(--accent-blue); color: #fff; }
+        .btn-luxury { background: var(--accent-gold); color: #000; }
+        .book-btn:hover { transform: scale(1.03); filter: brightness(1.1); }
+
+        /* --- FOOTER --- */
+        footer { padding: 60px 20px 30px; text-align: center; background: #0f172a; border-top: 1px solid rgba(59, 130, 246, 0.1); color: #94a3b8; }
+        .footer-links { margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .footer-links a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .footer-links a:hover { color: var(--accent-blue); }
+        .footer-brand { font-family: 'Poppins', sans-serif; color: #fff; font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; display: block; }
+
+        @media (max-width: 1100px) { .grid-cards { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .nav-links { display: none; } .grid-cards { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .grid-cards { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo-nav">THINGS TO DO FRANCE</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <button class="dropbtn">Cities ▼</button>
+            <div class="dropdown-content">
+                <a href="paris.html">Paris</a>
+                <a href="nice.html">Nice</a>
+                <a href="cannes.html">Cannes</a>
+                <a href="marseille.html">Marseille</a>
+                <a href="lyon.html">Lyon</a>
+                <a href="bordeaux.html">Bordeaux</a>
+                <a href="strasbourg.html">Strasbourg</a>
+                <a href="toulouse.html">Toulouse</a>
+                <a href="annecy.html">Annecy</a>
+                <a href="lille.html">Lille</a>
+                <a href="nantes.html">Nantes</a>
+                <a href="montpellier.html">Montpellier</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <h1>Toulouse 2026</h1>
+    <p>La Ville Rose: Where History Meets the Stars</p>
+</header>
+
+<div class="container">
+
+<h2>Top 10 Must-Visit Places in Toulouse</h2>
+<div class="grid-cards">
+    <div class="card card-place">
+        <h3>Place du Capitole</h3>
+        <p>The city's magnificent main square, featuring the historic city hall and vibrant cafés.</p>
+        <div class="pro-tip">💡 Tip: Walk through the arches to see the painted ceilings depicting history.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Basilique Saint-Sernin</h3>
+        <p>A UNESCO World Heritage site and the largest Romanesque church in Europe.</p>
+        <div class="pro-tip">💡 Tip: Visit the crypts to see the incredible collection of relics.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Couvent des Jacobins</h3>
+        <p>A medieval masterpiece known for its "palm tree" vaulting and the tomb of Thomas Aquinas.</p>
+        <div class="pro-tip">💡 Tip: The cloisters offer a perfectly silent escape from the city noise.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Cité de l’Espace</h3>
+        <p>A world-class theme park dedicated to space exploration, featuring full-scale rockets.</p>
+        <div class="pro-tip">💡 Tip: Great for families! Allow at least 5-6 hours for a full visit.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Musée des Augustins</h3>
+        <p>A Fine Arts museum housed in a stunning former convent with a Gothic cloister.</p>
+        <div class="pro-tip">💡 Tip: Don't miss the unique collection of Romanesque sculptures.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Canal du Midi</h3>
+        <p>A historic waterway perfect for a peaceful bike ride or a scenic boat cruise under the trees.</p>
+        <div class="pro-tip">💡 Tip: Rent a bike and ride towards the outskirts for a quiet nature trip.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Hôtel d’Assézat</h3>
+        <p>The most beautiful Renaissance mansion in the city, housing the Bemberg Foundation art.</p>
+        <div class="pro-tip">💡 Tip: The courtyard is free to enter and perfect for architecture lovers.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Pont Neuf</h3>
+        <p>Despite its name ("New Bridge"), it is the oldest bridge in Toulouse, crossing the Garonne.</p>
+        <div class="pro-tip">💡 Tip: Best view is from the Quai de la Daurade at sunset.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Jardin des Plantes</h3>
+        <p>A large public botanical garden perfect for relaxing or a morning jog.</p>
+        <div class="pro-tip">💡 Tip: It connects to the Grand Rond and the Royal Garden via footbridges.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Quai de la Daurade</h3>
+        <p>A popular riverfront promenade where locals gather to enjoy the sun and live music.</p>
+        <div class="pro-tip">💡 Tip: Grab a local beer and sit on the grass like a true Toulousain.</div>
+    </div>
+</div>
+
+<h2 class="gastro-h2">Top 10 Places to Eat in Toulouse</h2>
+<div class="grid-cards">
+    <div class="card card-gastro">
+        <h3>Michel Sarran</h3>
+        <p>A legendary 2-star Michelin experience by one of France's most famous celebrity chefs.</p>
+        <div class="pro-tip">💰 Price: Luxury. World-class gourmet innovation.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Py-r</h3>
+        <p>Sophisticated modern dining in a sleek setting with creative, visually stunning dishes.</p>
+        <div class="pro-tip">💰 Price: Luxury. Perfect for high-end celebrations.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Les Jardins de l’Opéra</h3>
+        <p>Refined cuisine served in a beautiful courtyard next to the Capitol Theater.</p>
+        <div class="pro-tip">💰 Price: Mid-range / Fine. Elegant atmosphere.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Au Pois Gourmand</h3>
+        <p>Creative market-fresh cooking using local Occitan flavors in a charming setting.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Highly rated for its price-quality ratio.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Maison</h3>
+        <p>Modern French comfort food with a unique, artistic touch. Trendy and delicious.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Very popular with the local crowd.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Bibent</h3>
+        <p>A classic brasserie with a magnificent Belle Époque interior right on the Capitol square.</p>
+        <div class="pro-tip">💰 Price: Budget / Mid-range. Iconic French vibes.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Chez Emile</h3>
+        <p>Famous for its traditional regional dishes, especially the authentic Cassoulet.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. A local institution since 1940.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Genty Magre</h3>
+        <p>A cozy bistro focusing on market-to-table menus and seasonal ingredients.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Great for a casual local lunch.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Bouchon Toulousain</h3>
+        <p>Traditional French cooking in a warm, welcoming environment with generous portions.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Homestyle and authentic.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Table O</h3>
+        <p>Healthy, modern French fast food focused on fresh salads and creative sandwiches.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Ideal for a quick, quality bite.</div>
+    </div>
+</div>
+
+<h2>Toulouse Itineraries – 1, 3 & 7 Day Guides</h2>
+
+<div class="itinerary-box">
+    <span class="day-label">⏱️ 1-Day Highlights</span>
+    <h3>Essentials of the Pink City</h3>
+    <p>
+        <strong>09:00:</strong> Place du Capitole – Start with coffee at the heart of the city.<br>
+        <strong>10:30:</strong> Basilique Saint-Sernin – Marvel at the Romanesque architecture.<br>
+        <strong>12:30:</strong> Lunch at Le Bibent – Classic brasserie meal near the square.<br>
+        <strong>14:00:</strong> Musée des Augustins – Fine art in a Gothic convent setting.<br>
+        <strong>16:00:</strong> Pont Neuf & Quai de la Daurade – Riverside walk at the golden hour.<br>
+        <strong>19:00:</strong> Dinner at Les Jardins de l’Opéra – Refined Occitan gastronomy.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🥂 Weekend City Break</span>
+    <h3>3 Days: History, Culture & Canals</h3>
+    <p>
+        <strong>Day 1:</strong> Historical Center. Capitole, Saint-Sernin, and the Jacobins Convent. Dinner at La Maison.<br>
+        <strong>Day 2:</strong> Urban Culture. Musée des Augustins, Hôtel d’Assézat, and local boutique shopping. Dinner at Au Pois Gourmand.<br>
+        <strong>Day 3:</strong> Relax & Nature. Bike ride along Canal du Midi, afternoon at Jardin des Plantes. Dinner at Le Bouchon Toulousain.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🏖️ 7-Day Experience</span>
+    <h3>The Ultimate Toulouse & Space Explorer</h3>
+    <p>
+        <strong>Day 1:</strong> Arrival & Capitole square exploration.<br>
+        <strong>Day 2:</strong> Churches & Fine Art day (Saint-Sernin to Augustins).<br>
+        <strong>Day 3:</strong> Cité de l'Espace – Full day dedicated to space and rockets.<br>
+        <strong>Day 4:</strong> Riverside living. Quai de la Daurade, Pont Neuf, and local parks.<br>
+        <strong>Day 5:</strong> Canal du Midi. A full day boat cruise or long bike expedition.<br>
+        <strong>Day 6:</strong> Gastronomy Day. Victor Hugo Market morning and a gourmet night at Michel Sarran.<br>
+        <strong>Day 7:</strong> Final shopping, souvenir hunting, and a farewell dinner at Le Py-r.
+    </p>
+</div>
+
+<div class="booking-section">
+    <h2>Where to stay in Toulouse?</h2>
+    <p>Find your perfect base for your 2026 trip:</p>
+    <div class="booking-grid">
+        <div class="booking-card">
+            <h4>Budget Friendly</h4>
+            <p>Modern stays in the Arnaud Bernard or Matabiau districts.</p>
+            <a href="#" class="book-btn btn-budget">Check Cheap Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Mid-Range Comfort</h4>
+            <p>Charming boutique hotels near Place Wilson or Esquirol.</p>
+            <a href="#" class="book-btn btn-mid">Check Best Value Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Luxury & Design</h4>
+            <p>5-star experiences at Hotel de la Cité or Cour des Consuls.</p>
+            <a href="#" class="book-btn btn-luxury">Check Luxury Hotels</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="cookies.html">Cookies Policy</a>
+    </div>
+    <span class="footer-brand">THINGS TO DO FRANCE</span>
+    <p>© 2026 thingstodofrance.com | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

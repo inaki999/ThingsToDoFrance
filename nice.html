@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Do in Nice 2026 | Best Attractions, Gastronomy & Itineraries</title>
+    <meta name="description" content="Discover Nice 2026: Top 10 architectural landmarks, best 10 restaurants (luxury & cheap), and detailed 1, 3, and 7-day itineraries for your Riviera trip.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --bg-dark: #0f172a;
+            --accent-blue: #60a5fa;
+            --accent-gold: #fbbf24;
+            --accent-green: #4ade80;
+            --text-light: #f1f5f9;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body { margin: 0; font-family: 'Roboto', sans-serif; color: var(--text-light); background: var(--bg-dark); line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* --- NAVIGATION --- */
+        nav { 
+            position: fixed; top: 0; width: 100%; height: 70px; 
+            background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); 
+            z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); 
+            display: flex; align-items: center; justify-content: space-between; 
+            padding: 0 5%; box-sizing: border-box; 
+        }
+        .logo-nav { font-family: 'Poppins'; font-weight: 700; color: #fff; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; align-items: center; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent-blue); }
+
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn { background: none; border: none; color: #fff; font-family: inherit; font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 5px; height: 70px; }
+        .dropdown-content { display: none; position: absolute; background-color: #1e293b; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); border-radius: 12px; overflow: hidden; top: 70px; right: 0; border: 1px solid rgba(255,255,255,0.1); }
+        .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
+        .dropdown-content a:hover { background-color: var(--accent-blue); }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        /* --- HERO --- */
+        .hero { 
+            height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,1)), url('https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&w=1600&q=80'); 
+            background-size: cover; background-position: center; text-align: center; padding-top: 70px;
+        }
+        .hero h1 { font-family: 'Poppins'; font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; color: var(--accent-blue); margin-top: 10px; }
+        
+        /* --- CONTAINER --- */
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+        h2 { font-family: 'Poppins'; font-size: 2rem; border-left: 5px solid var(--accent-blue); padding-left: 20px; margin: 60px 0 30px; text-transform: uppercase; }
+        .gastro-h2 { border-color: var(--accent-gold); }
+
+        /* --- GRID CARDS --- */
+        .grid-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+        .card { 
+            background: var(--glass); border-radius: 15px; padding: 20px; 
+            border: 1px solid rgba(255,255,255,0.1); transition: 0.4s ease; 
+            display: flex; flex-direction: column; justify-content: space-between; font-size: 0.9rem;
+        }
+        .card-place:hover { border-color: var(--accent-blue); transform: translateY(-5px); }
+        .card-place h3 { color: var(--accent-blue); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .card-gastro:hover { border-color: var(--accent-gold); transform: translateY(-5px); }
+        .card-gastro h3 { color: var(--accent-gold); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .pro-tip { font-size: 0.8rem; color: #94a3b8; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); font-style: italic; }
+
+        /* --- ITINERARIES --- */
+        .itinerary-box { background: rgba(255, 255, 255, 0.02); border-radius: 20px; padding: 30px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .itinerary-box ul { list-style: none; padding: 0; margin: 0; }
+        .itinerary-box li { margin-bottom: 10px; border-left: 2px solid var(--accent-blue); padding-left: 15px; }
+        .day-label { color: var(--accent-gold); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; }
+
+        /* --- BOOKING DIV --- */
+        .booking-section { background: rgba(30, 41, 59, 0.5); border-radius: 20px; padding: 40px; border: 1px solid var(--accent-blue); margin: 80px 0 40px; text-align: center; }
+        .booking-section h2 { border-left: none; padding-left: 0; }
+        
+        .booking-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px; }
+        .booking-card { background: rgba(15, 23, 42, 0.5); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); }
+        .booking-card h4 { margin-top: 0; font-family: 'Poppins'; color: #fff; }
+        .book-btn { 
+            display: block; width: 100%; padding: 12px; text-align: center; text-decoration: none; 
+            border-radius: 8px; font-weight: 700; margin-top: 15px; transition: 0.3s; 
+        }
+        .btn-budget { background: var(--accent-green); color: #000; }
+        .btn-mid { background: var(--accent-blue); color: #fff; }
+        .btn-luxury { background: var(--accent-gold); color: #000; }
+        .book-btn:hover { transform: scale(1.03); filter: brightness(1.1); }
+
+        /* --- FOOTER --- */
+        footer { padding: 60px 20px 30px; text-align: center; background: #0f172a; border-top: 1px solid rgba(59, 130, 246, 0.1); color: #94a3b8; }
+        .footer-links { margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .footer-links a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .footer-links a:hover { color: var(--accent-blue); }
+        .footer-brand { font-family: 'Poppins', sans-serif; color: #fff; font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; display: block; }
+
+        @media (max-width: 1100px) { .grid-cards { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .nav-links { display: none; } .grid-cards { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .grid-cards { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo-nav">THINGS TO DO FRANCE</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <button class="dropbtn">Cities ▼</button>
+            <div class="dropdown-content">
+                <a href="paris.html">Paris</a>
+                <a href="nice.html">Nice</a>
+                <a href="cannes.html">Cannes</a>
+                <a href="marseille.html">Marseille</a>
+                <a href="lyon.html">Lyon</a>
+                <a href="bordeaux.html">Bordeaux</a>
+                <a href="strasbourg.html">Strasbourg</a>
+                <a href="toulouse.html">Toulouse</a>
+                <a href="annecy.html">Annecy</a>
+                <a href="lille.html">Lille</a>
+                <a href="nantes.html">Nantes</a>
+                <a href="montpellier.html">Montpellier</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <h1>Nice 2026</h1>
+    <p>Sunshine, Italian Facades & French Riviera Elegance</p>
+</header>
+
+<div class="container">
+
+<h2>Top 10 Architectural & Scenic Sites in Nice</h2>
+<div class="grid-cards">
+    <div class="card card-place">
+        <h3>Promenade des Anglais</h3>
+        <p>Iconic French Riviera promenade, perfect for a walk along the azure Mediterranean sea.</p>
+        <div class="pro-tip">💡 Tip: Rent a "vélo bleu" to explore the full 7km stretch easily.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Vieux Nice</h3>
+        <p>A labyrinth of narrow streets with vibrant Italian-style facades and hidden Baroque churches.</p>
+        <div class="pro-tip">💡 Tip: Get lost in the alleys to find the best local olive oil shops.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Castle Hill</h3>
+        <p>Offers the best panoramic view of the Bay of Angels and the rooftops of the old town.</p>
+        <div class="pro-tip">💡 Tip: Use the free elevator if you want to skip the stairs to the top.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Matisse Museum</h3>
+        <p>Located in a 17th-century Genoese villa, housing one of the world's largest Matisse collections.</p>
+        <div class="pro-tip">💡 Tip: Walk through the surrounding Cimiez olive grove after your visit.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Cours Saleya</h3>
+        <p>The social heart of the city, famous for its daily vibrant flower and food market.</p>
+        <div class="pro-tip">💡 Tip: Visit on Mondays for the famous antiques and flea market.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Russian Cathedral</h3>
+        <p>The largest Eastern Orthodox cathedral in Western Europe, featuring spectacular architecture.</p>
+        <div class="pro-tip">💡 Tip: Remember to dress modestly to enter this sacred site.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Marc Chagall Museum</h3>
+        <p>A national museum dedicated to the biblical works of the modernist master Marc Chagall.</p>
+        <div class="pro-tip">💡 Tip: The garden and the stained-glass concert hall are must-sees.</div>
+    </div>
+    <div class="card card-place">
+        <h3>MAMAC</h3>
+        <p>The Museum of Modern and Contemporary Art, featuring avant-garde works from the 1950s to today.</p>
+        <div class="pro-tip">💡 Tip: Go to the rooftop for a unique 360-degree view of Nice.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Place Masséna</h3>
+        <p>The main square of Nice, known for its red buildings, checkerboard floor, and modern statues.</p>
+        <div class="pro-tip">💡 Tip: Beautiful at night when the "Jaume Plensa" statues light up.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Port Lympia</h3>
+        <p>The historic port of Nice, filled with traditional colorful wooden boats known as "pointus."</p>
+        <div class="pro-tip">💡 Tip: Perfect spot for a sunset drink while watching the ferries.</div>
+    </div>
+</div>
+
+<h2 class="gastro-h2">Top 10 Culinary Experiences in Nice</h2>
+<div class="grid-cards">
+    <div class="card card-gastro">
+        <h3>Le Chantecler</h3>
+        <p>Located in the Negresco hotel, it offers the peak of 2-star Michelin luxury in a grand setting.</p>
+        <div class="pro-tip">💰 Price: Luxury. The ultimate fine dining in Nice.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Petite Maison</h3>
+        <p>Famous for high-end Provençal cuisine and its celebrity-filled, lively atmosphere.</p>
+        <div class="pro-tip">💰 Price: Luxury. Best for upscale Niçois specialties.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Chez Pipo</h3>
+        <p>The most authentic place to try "Socca," the famous chickpea pancake of Nice.</p>
+        <div class="pro-tip">💰 Price: Cheap. A historic budget-friendly must-visit.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Jan</h3>
+        <p>A unique Michelin-star experience where South African flavors meet Riviera ingredients.</p>
+        <div class="pro-tip">💰 Price: Luxury / Exclusive. Modern and creative.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Fenocchio</h3>
+        <p>A mythical glacier in the old town famous for flavors like lavender, thyme, and tomato.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Iconic ice cream experience.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Bistrot d'Antoine</h3>
+        <p>Market-fresh traditional food in a cozy bistro setting. Very popular with locals.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Outstanding value for money.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Achiardi</h3>
+        <p>A family-run gem serving authentic local specialties away from the tourist crowds.</p>
+        <div class="pro-tip">💰 Price: Moderate. Pure Niçois soul on a plate.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Olive & Artichaut</h3>
+        <p>Features a "Cuisine Niçoise" label, serving seasonal food directly from the market.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Fresh and artisanal.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Plongeoir</h3>
+        <p>Dine on a pillar over the sea rocks. One of the most scenic restaurant locations in France.</p>
+        <div class="pro-tip">💰 Price: High-end. Unbeatable Mediterranean views.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Confiserie Florian</h3>
+        <p>Famous for their crystallized flowers and citrus jams. A sweet piece of history.</p>
+        <div class="pro-tip">💰 Price: Moderate. Perfect for gourmet gifts.</div>
+    </div>
+</div>
+
+<h2>Ultimate Nice Travel Itineraries – 1, 3 & 7 Day Guides</h2>
+
+<div class="itinerary-box">
+    <span class="day-label">⏱️ 1-Day Express</span>
+    <h3>Best of Nice in a Day</h3>
+    <ul>
+        <li><strong>09:00:</strong> Start at Cours Saleya Market – breakfast among flowers.</li>
+        <li><strong>11:00:</strong> Explore Vieux Nice (Old Town) and its hidden churches.</li>
+        <li><strong>13:00:</strong> Lunch at Chez Pipo for authentic Socca.</li>
+        <li><strong>14:30:</strong> Walk up Castle Hill for the best views of the city.</li>
+        <li><strong>16:30:</strong> Stroll the Promenade des Anglais towards Hotel Negresco.</li>
+        <li><strong>19:00:</strong> Dinner at Le Bistrot d'Antoine in the Old Town.</li>
+    </ul>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🥂 Weekend Getaway</span>
+    <h3>3-Day Riviera Highlights</h3>
+    <ul>
+        <li><strong>Day 1:</strong> Old Town, Cours Saleya Market, and sunset at Castle Hill.</li>
+        <li><strong>Day 2:</strong> Art morning at Matisse & Chagall Museums. Afternoon at Place Masséna.</li>
+        <li><strong>Day 3:</strong> Day trip to nearby Villefranche-sur-Mer or the village of Eze.</li>
+    </ul>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🏰 7-Day Immersion</span>
+    <h3>The Full French Riviera Experience</h3>
+    <ul>
+        <li><strong>Day 1:</strong> Nice highlights – Promenade, Old Town, Port Lympia.</li>
+        <li><strong>Day 2:</strong> Nice Art Museums (Matisse, Chagall, MAMAC).</li>
+        <li><strong>Day 3:</strong> Coastal train to Monaco and Monte Carlo.</li>
+        <li><strong>Day 4:</strong> Boat trip or bus to Saint-Paul-de-Vence (art village).</li>
+        <li><strong>Day 5:</strong> Day trip to Cannes and Antibes.</li>
+        <li><strong>Day 6:</strong> Relaxing day at a beach club in Nice or Saint-Jean-Cap-Ferrat.</li>
+        <li><strong>Day 7:</strong> Local cooking class in Nice and farewell dinner at Le Plongeoir.</li>
+    </ul>
+</div>
+
+<div class="booking-section">
+    <h2>Planning your stay in Nice?</h2>
+    <p>Compare the best accommodation for your 2026 trip:</p>
+    <div class="booking-grid">
+        <div class="booking-card">
+            <h4>Budget Friendly</h4>
+            <p>Hostels and clean, central 2-star hotels near the station.</p>
+            <a href="#" class="book-btn btn-budget">Check Cheap Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Mid-Range Comfort</h4>
+            <p>Boutique 3 and 4-star hotels in the Old Town or Promenade.</p>
+            <a href="#" class="book-btn btn-mid">Check Best Value Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Luxury & Palace</h4>
+            <p>Iconic 5-star hotels like Le Negresco or sea-view suites.</p>
+            <a href="#" class="book-btn btn-luxury">Check Luxury Hotels</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="cookies.html">Cookies Policy</a>
+    </div>
+    <span class="footer-brand">THINGS TO DO FRANCE</span>
+    <p>© 2026 thingstodofrance.com | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

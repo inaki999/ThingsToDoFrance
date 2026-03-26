@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Do in Marseille 2026 | Best Attractions, Gastronomy & Itineraries</title>
+    <meta name="description" content="Discover Marseille 2026: The Vieux-Port, Notre-Dame de la Garde, best bouillabaisse restaurants, and detailed 1, 3, and 7-day itineraries.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --bg-dark: #0f172a;
+            --accent-blue: #60a5fa;
+            --accent-gold: #fbbf24;
+            --accent-green: #4ade80;
+            --text-light: #f1f5f9;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body { margin: 0; font-family: 'Roboto', sans-serif; color: var(--text-light); background: var(--bg-dark); line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* --- NAVIGATION --- */
+        nav { 
+            position: fixed; top: 0; width: 100%; height: 70px; 
+            background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); 
+            z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); 
+            display: flex; align-items: center; justify-content: space-between; 
+            padding: 0 5%; box-sizing: border-box; 
+        }
+        .logo-nav { font-family: 'Poppins'; font-weight: 700; color: #fff; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; align-items: center; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent-blue); }
+
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn { background: none; border: none; color: #fff; font-family: inherit; font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 5px; height: 70px; }
+        .dropdown-content { display: none; position: absolute; background-color: #1e293b; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); border-radius: 12px; overflow: hidden; top: 70px; right: 0; border: 1px solid rgba(255,255,255,0.1); }
+        .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
+        .dropdown-content a:hover { background-color: var(--accent-blue); }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        /* --- HERO (Consistente con los otros HTML) --- */
+        .hero { 
+            height: 50vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.9)), 
+                        url('https://images.unsplash.com/photo-1659642081573-ac1a040d2e50?q=80&w=1600&auto=format&fit=crop'); 
+            background-size: cover; 
+            background-position: center; 
+            text-align: center; 
+            padding-top: 70px;
+        }
+        .hero h1 { font-family: 'Poppins'; font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; text-transform: uppercase; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.2rem; color: var(--accent-blue); margin-top: 10px; font-weight: 500; }
+        
+        /* --- CONTAINER --- */
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+        h2 { font-family: 'Poppins'; font-size: 2rem; border-left: 5px solid var(--accent-blue); padding-left: 20px; margin: 60px 0 30px; text-transform: uppercase; }
+        .gastro-h2 { border-color: var(--accent-gold); }
+
+        /* --- GRID CARDS --- */
+        .grid-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+        .card { 
+            background: var(--glass); border-radius: 15px; padding: 20px; 
+            border: 1px solid rgba(255,255,255,0.1); transition: 0.4s ease; 
+            display: flex; flex-direction: column; justify-content: space-between; font-size: 0.9rem;
+        }
+        .card-place:hover { border-color: var(--accent-blue); transform: translateY(-5px); }
+        .card-place h3 { color: var(--accent-blue); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .card-gastro:hover { border-color: var(--accent-gold); transform: translateY(-5px); }
+        .card-gastro h3 { color: var(--accent-gold); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .pro-tip { font-size: 0.8rem; color: #94a3b8; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); font-style: italic; }
+
+        /* --- ITINERARIES --- */
+        .itinerary-box { background: rgba(255, 255, 255, 0.02); border-radius: 20px; padding: 30px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .itinerary-box h3 { font-family: 'Poppins'; margin-top: 10px; }
+        .itinerary-box p { margin-bottom: 0; }
+        .day-label { color: var(--accent-gold); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; }
+
+        /* --- BOOKING SECTION --- */
+        .booking-section { background: rgba(30, 41, 59, 0.5); border-radius: 20px; padding: 40px; border: 1px solid var(--accent-blue); margin: 80px 0 40px; text-align: center; }
+        .booking-section h2 { border-left: none; padding-left: 0; margin-top: 0; }
+        .booking-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px; }
+        .booking-card { background: rgba(15, 23, 42, 0.5); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); }
+        .booking-card h4 { margin-top: 0; font-family: 'Poppins'; color: #fff; }
+        .book-btn { 
+            display: block; width: 100%; padding: 12px; text-align: center; text-decoration: none; 
+            border-radius: 8px; font-weight: 700; margin-top: 15px; transition: 0.3s; 
+        }
+        .btn-budget { background: var(--accent-green); color: #000; }
+        .btn-mid { background: var(--accent-blue); color: #fff; }
+        .btn-luxury { background: var(--accent-gold); color: #000; }
+        .book-btn:hover { transform: scale(1.03); filter: brightness(1.1); }
+
+        /* --- FOOTER --- */
+        footer { padding: 60px 20px 30px; text-align: center; background: #0f172a; border-top: 1px solid rgba(59, 130, 246, 0.1); color: #94a3b8; }
+        .footer-links { margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .footer-links a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .footer-links a:hover { color: var(--accent-blue); }
+        .footer-brand { font-family: 'Poppins', sans-serif; color: #fff; font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; display: block; }
+
+        @media (max-width: 1100px) { .grid-cards { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .nav-links { display: none; } .grid-cards { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .grid-cards { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo-nav">THINGS TO DO FRANCE</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <button class="dropbtn">Cities ▼</button>
+            <div class="dropdown-content">
+                <a href="paris.html">Paris</a>
+                <a href="nice.html">Nice</a>
+                <a href="cannes.html">Cannes</a>
+                <a href="marseille.html">Marseille</a>
+                <a href="lyon.html">Lyon</a>
+                <a href="bordeaux.html">Bordeaux</a>
+                <a href="strasbourg.html">Strasbourg</a>
+                <a href="toulouse.html">Toulouse</a>
+                <a href="annecy.html">Annecy</a>
+                <a href="lille.html">Lille</a>
+                <a href="nantes.html">Nantes</a>
+                <a href="montpellier.html">Montpellier</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <h1>Marseille 2026</h1>
+    <p>The Mediterranean Soul of France</p>
+</header>
+
+<div class="container">
+
+<h2>Top 10 Architectural & Scenic Sites in Marseille</h2>
+<div class="grid-cards">
+    <div class="card card-place">
+        <h3>Vieux-Port</h3>
+        <p>The beating heart of the city, a historic harbor where yachts meet traditional fishing boats.</p>
+        <div class="pro-tip">💡 Tip: Catch the ferry-boat crossing for a few cents to see the port from the water.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Notre-Dame de la Garde</h3>
+        <p>The iconic hilltop basilica offering 360-degree views of Marseille and the Mediterranean.</p>
+        <div class="pro-tip">💡 Tip: Take the "petit train" from the port if you want to avoid the steep climb.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Le Panier</h3>
+        <p>Marseille's oldest district, famous for its narrow alleys, colorful facades, and vibrant street art.</p>
+        <div class="pro-tip">💡 Tip: A perfect place for artisan shopping and local "pastis" in a hidden square.</div>
+    </div>
+    <div class="card card-place">
+        <h3>MuCEM</h3>
+        <p>A stunning modern museum dedicated to Mediterranean civilizations, connected by a high walkway.</p>
+        <div class="pro-tip">💡 Tip: Access to the outdoor terraces and the bridge to the Fort is free.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Fort Saint-Jean</h3>
+        <p>A historic fortress dating back to the 17th century, now part of the MuCEM cultural complex.</p>
+        <div class="pro-tip">💡 Tip: Explore the Mediterranean garden inside the fort for a quiet break.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Château d’If</h3>
+        <p>The island-fortress made famous by Alexandre Dumas' "The Count of Monte Cristo".</p>
+        <div class="pro-tip">💡 Tip: Take a boat from the Vieux-Port; check the weather as sailings can be cancelled.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Cathédrale de la Major</h3>
+        <p>An imposing Romano-Byzantine cathedral with striking striped limestone and marble work.</p>
+        <div class="pro-tip">💡 Tip: The sunset view from the cathedral's esplanade is breathtaking.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Plages du Prado</h3>
+        <p>The largest beaches in the city, perfect for families, windsurfing, or a relaxed seaside stroll.</p>
+        <div class="pro-tip">💡 Tip: Visit the giant replica of Michelangelo's David located nearby.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Parc National des Calanques</h3>
+        <p>Dramatic limestone cliffs and turquoise inlets. One of France's most beautiful natural parks.</p>
+        <div class="pro-tip">💡 Tip: Wear hiking shoes and bring plenty of water; access is often restricted in summer.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Palais Longchamp</h3>
+        <p>A monumental fountain and colonnade built to celebrate the arrival of water to the city.</p>
+        <div class="pro-tip">💡 Tip: It houses the Fine Arts and Natural History museums—great for a rainy day.</div>
+    </div>
+</div>
+
+<h2 class="gastro-h2">Top 10 Culinary Experiences in Marseille</h2>
+<div class="grid-cards">
+    <div class="card card-gastro">
+        <h3>Le Petit Nice</h3>
+        <p>Experience the peak of Mediterranean dining with 3 Michelin stars and stunning sea views.</p>
+        <div class="pro-tip">💰 Price: Luxury. Gerald Passedat’s masterpiece of marine cuisine.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Miramar</h3>
+        <p>The world-renowned destination for the authentic Marseille Bouillabaisse in a classic setting.</p>
+        <div class="pro-tip">💰 Price: Mid-range / High-end. Essential for tradition lovers.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>AM par Alexandre Mazzia</h3>
+        <p>A 3-star Michelin experience that blends African, Asian, and Mediterranean flavors creatively.</p>
+        <div class="pro-tip">💰 Price: Luxury. One of the most innovative chefs in France.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Chez Etienne</h3>
+        <p>A legendary no-reservation spot in Le Panier known for its pizza and fried squid.</p>
+        <div class="pro-tip">💰 Price: Budget / Casual. Cash only, old-school Marseille vibes.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Cantinetta</h3>
+        <p>Amazing Italian-inspired dishes with fresh market products and a charming courtyard.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Very popular with locals, book in advance.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Café de l’Abbaye</h3>
+        <p>The perfect spot for a cheap drink and local snacks with a view over the Vieux-Port entrance.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Best atmosphere at sunset.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>L’Epuisette</h3>
+        <p>Tapas and incredible seafood located in the tiny Vallon des Auffes fishing port.</p>
+        <div class="pro-tip">💰 Price: High-end (Gourmet) / Tapas (Bar). Iconic location.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Bistrot du Panier</h3>
+        <p>Local, fresh ingredients served with a modern twist in the heart of the historic district.</p>
+        <div class="pro-tip">💰 Price: Budget / Mid-range. Honest and delicious cooking.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Restaurant l’Orientale</h3>
+        <p>A great place to experience Marseille's North African influence with excellent couscous.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Authentic and generous portions.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Grain de Sable</h3>
+        <p>A cozy local spot serving creative Mediterranean tapas and seasonal dishes.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Relaxed and high-quality casual-fine dining.</div>
+    </div>
+</div>
+
+<h2>Ultimate Marseille Travel Itineraries – 1, 3 & 7 Day Guides</h2>
+
+<div class="itinerary-box">
+    <span class="day-label">⏱️ 1-Day Express</span>
+    <h3>The Best of Marseille in 24 Hours</h3>
+    <p>
+        <strong>09:00:</strong> Morning at Vieux-Port with coffee by the water.<br>
+        <strong>10:30:</strong> Walk through Le Panier district and its colorful streets.<br>
+        <strong>12:30:</strong> Authentic Bouillabaisse lunch at Le Miramar.<br>
+        <strong>14:30:</strong> Visit MuCEM and walk across the bridge to Fort Saint-Jean.<br>
+        <strong>17:00:</strong> Take a bus or the train up to Notre-Dame de la Garde for the sunset.<br>
+        <strong>19:30:</strong> Relaxed dinner at Café de l’Abbaye or Chez Etienne.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🥂 Weekend Getaway</span>
+    <h3>3-Day Culture & Nature</h3>
+    <p>
+        <strong>Day 1:</strong> Vieux-Port, Le Panier, MuCEM and the iconic view from Notre-Dame de la Garde. Dinner at La Cantinetta.<br>
+        <strong>Day 2:</strong> Hiking day at Parc National des Calanques (En-Vau or Sormiou). Evening fine dining at Le Petit Nice.<br>
+        <strong>Day 3:</strong> Boat trip to Château d’If, afternoon at Palais Longchamp and sunset tapas at L’Epuisette in Vallon des Auffes.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🏖️ 7-Day Immersion</span>
+    <h3>The Full Provençal Experience</h3>
+    <p>
+        <strong>Day 1:</strong> Port, Panier and MuCEM essentials.<br>
+        <strong>Day 2:</strong> Religious history at Saint-Victor Abbey and traditional Marseille culture.<br>
+        <strong>Day 3:</strong> Full day exploring the Calanques National Park by land or boat.<br>
+        <strong>Day 4:</strong> The Frioul Islands and Château d’If excursion.<br>
+        <strong>Day 5:</strong> Day trip to the charming fishing village of Cassis.<br>
+        <strong>Day 6:</strong> Architecture day at Palais Longchamp and Cathédrale de la Major.<br>
+        <strong>Day 7:</strong> Gourmet shopping in the center and farewell dinner at AM par Alexandre Mazzia.
+    </p>
+</div>
+
+<div class="booking-section">
+    <h2>Planning your stay in Marseille?</h2>
+    <p>Compare the best accommodation for your 2026 trip:</p>
+    <div class="booking-grid">
+        <div class="booking-card">
+            <h4>Budget Friendly</h4>
+            <p>Smart hostels and authentic studios near the Vieux-Port or Le Panier.</p>
+            <a href="#" class="book-btn btn-budget">Check Cheap Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Mid-Range Comfort</h4>
+            <p>Boutique hotels with sea views along the Corniche or near the Opera.</p>
+            <a href="#" class="book-btn btn-mid">Check Best Value Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Luxury & Suites</h4>
+            <p>Exclusive 5-star experiences at the InterContinental or Petit Nice.</p>
+            <a href="#" class="book-btn btn-luxury">Check Luxury Hotels</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="cookies.html">Cookies Policy</a>
+    </div>
+    <span class="footer-brand">THINGS TO DO FRANCE</span>
+    <p>© 2026 thingstodofrance.com | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Do in Nantes 2026 | Mechanical Dreams & Ducal History</title>
+    <meta name="description" content="Discover Nantes 2026: The city of Jules Verne. Top 10 attractions, the Giant Elephant, and the best of Loire Valley gastronomy.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --bg-dark: #0f172a;
+            --accent-blue: #60a5fa;
+            --accent-gold: #fbbf24;
+            --accent-green: #4ade80;
+            --text-light: #f1f5f9;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body { margin: 0; font-family: 'Roboto', sans-serif; color: var(--text-light); background: var(--bg-dark); line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* --- NAVIGATION --- */
+        nav { 
+            position: fixed; top: 0; width: 100%; height: 70px; 
+            background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); 
+            z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); 
+            display: flex; align-items: center; justify-content: space-between; 
+            padding: 0 5%; box-sizing: border-box; 
+        }
+        .logo-nav { font-family: 'Poppins'; font-weight: 700; color: #fff; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; align-items: center; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent-blue); }
+
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn { background: none; border: none; color: #fff; font-family: inherit; font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 5px; height: 70px; }
+        .dropdown-content { display: none; position: absolute; background-color: #1e293b; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); border-radius: 12px; overflow: hidden; top: 70px; right: 0; border: 1px solid rgba(255,255,255,0.1); }
+        .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
+        .dropdown-content a:hover { background-color: var(--accent-blue); }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        /* --- HERO --- */
+        .hero { 
+            height: 50vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,1)), 
+                        url('https://images.unsplash.com/photo-1648932731350-af4cfde43143?q=80&w=1151&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+            background-size: cover; 
+            background-position: center; 
+            text-align: center; 
+            padding-top: 70px;
+        }
+        .hero h1 { font-family: 'Poppins'; font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; color: var(--accent-blue); margin-top: 10px; font-weight: 500; }
+        
+        /* --- CONTAINER --- */
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+        h2 { font-family: 'Poppins'; font-size: 2rem; border-left: 5px solid var(--accent-blue); padding-left: 20px; margin: 60px 0 30px; text-transform: uppercase; }
+        .gastro-h2 { border-color: var(--accent-gold); }
+
+        /* --- GRID CARDS --- */
+        .grid-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+        .card { 
+            background: var(--glass); border-radius: 15px; padding: 20px; 
+            border: 1px solid rgba(255,255,255,0.1); transition: 0.4s ease; 
+            display: flex; flex-direction: column; justify-content: space-between; font-size: 0.9rem;
+        }
+        .card-place:hover { border-color: var(--accent-blue); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(96, 165, 250, 0.1); }
+        .card-place h3 { color: var(--accent-blue); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .card-gastro { border: 1px solid rgba(251, 191, 36, 0.1); }
+        .card-gastro:hover { border-color: var(--accent-gold); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(251, 191, 36, 0.1); }
+        .card-gastro h3 { color: var(--accent-gold); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .pro-tip { font-size: 0.8rem; color: #94a3b8; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); font-style: italic; }
+
+        /* --- ITINERARIES --- */
+        .itinerary-box { background: rgba(255, 255, 255, 0.02); border-radius: 20px; padding: 30px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .day-label { color: var(--accent-gold); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; }
+
+        /* --- BOOKING SECTION --- */
+        .booking-section { background: rgba(30, 41, 59, 0.5); border-radius: 20px; padding: 40px; border: 1px solid var(--accent-blue); margin: 80px 0 40px; text-align: center; }
+        .booking-section h2 { border-left: none; padding-left: 0; margin-top: 0; }
+        .booking-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px; }
+        .booking-card { background: rgba(15, 23, 42, 0.5); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); }
+        .booking-card h4 { margin-top: 0; font-family: 'Poppins'; color: #fff; }
+        .book-btn { 
+            display: block; width: 100%; padding: 12px; text-align: center; text-decoration: none; 
+            border-radius: 8px; font-weight: 700; margin-top: 15px; transition: 0.3s; box-sizing: border-box;
+        }
+        .btn-budget { background: var(--accent-green); color: #000; }
+        .btn-mid { background: var(--accent-blue); color: #fff; }
+        .btn-luxury { background: var(--accent-gold); color: #000; }
+        .book-btn:hover { transform: scale(1.03); filter: brightness(1.1); }
+
+        /* --- FOOTER --- */
+        footer { padding: 60px 20px 30px; text-align: center; background: #0f172a; border-top: 1px solid rgba(59, 130, 246, 0.1); color: #94a3b8; }
+        .footer-links { margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .footer-links a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .footer-links a:hover { color: var(--accent-blue); }
+        .footer-brand { font-family: 'Poppins', sans-serif; color: #fff; font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; display: block; }
+
+        @media (max-width: 1100px) { .grid-cards { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .nav-links { display: none; } .grid-cards { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .grid-cards { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo-nav">THINGS TO DO FRANCE</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <button class="dropbtn">Cities ▼</button>
+            <div class="dropdown-content">
+                <a href="paris.html">Paris</a>
+                <a href="nice.html">Nice</a>
+                <a href="cannes.html">Cannes</a>
+                <a href="marseille.html">Marseille</a>
+                <a href="lyon.html">Lyon</a>
+                <a href="bordeaux.html">Bordeaux</a>
+                <a href="strasbourg.html">Strasbourg</a>
+                <a href="toulouse.html">Toulouse</a>
+                <a href="annecy.html">Annecy</a>
+                <a href="lille.html">Lille</a>
+                <a href="nantes.html">Nantes</a>
+                <a href="montpellier.html">Montpellier</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <h1>Nantes 2026</h1>
+    <p>The Creative Capital: From Castle Walls to Mechanical Dreams</p>
+</header>
+
+<div class="container">
+
+<h2>Top 10 Must-Visit Places in Nantes</h2>
+<div class="grid-cards">
+    <div class="card card-place">
+        <h3>Château des Ducs de Bretagne</h3>
+        <p>A historic fortress and residence of the Dukes of Brittany, housing the Nantes History Museum.</p>
+        <div class="pro-tip">💡 Tip: Walk the ramparts for a great perspective of the modern city surroundings.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Les Machines de l’île</h3>
+        <p>A magical mechanical world inspired by Jules Verne. Home to the famous 12-meter high Giant Elephant.</p>
+        <div class="pro-tip">💡 Tip: Book your elephant ride tickets in advance—they sell out fast!</div>
+    </div>
+    <div class="card card-place">
+        <h3>St. Pierre and St. Paul Cathedral</h3>
+        <p>An imposing Gothic cathedral known for its white stone and beautiful stained glass windows.</p>
+        <div class="pro-tip">💡 Tip: Visit the tomb of Francis II, a masterpiece of French Renaissance sculpture.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Jardin des Plantes</h3>
+        <p>A world-class botanical garden featuring exotic plant collections and giant playful sculptures.</p>
+        <div class="pro-tip">💡 Tip: Look for the quirky "sleeping" benches and plant-art installations.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Île de Versailles</h3>
+        <p>A man-made island on the Erdre river transformed into a peaceful Japanese-style garden.</p>
+        <div class="pro-tip">💡 Tip: Rent an electric boat nearby to cruise the Erdre river quietly.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Passage Pommeraye</h3>
+        <p>A stunning 19th-century shopping arcade with grand staircases and neoclassical statues.</p>
+        <div class="pro-tip">💡 Tip: It’s one of the most beautiful covered passages in Europe—bring your camera!</div>
+    </div>
+    <div class="card card-place">
+        <h3>Natural History Museum</h3>
+        <p>A great family destination featuring impressive zoology, paleontology, and mineralogy collections.</p>
+        <div class="pro-tip">💡 Tip: The vivarium section is a big hit with children.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Quartier Bouffay</h3>
+        <p>The oldest district of Nantes. A medieval maze of timber-framed houses, bars, and bistros.</p>
+        <div class="pro-tip">💡 Tip: This is the best place to find the city's nightlife and local atmosphere.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Hangar à Bananes</h3>
+        <p>A former banana warehouse turned into a trendy row of cafes, bars, and art galleries by the Loire.</p>
+        <div class="pro-tip">💡 Tip: Visit at night to see the 'Rings' art installation by Daniel Buren light up.</div>
+    </div>
+    <div class="card card-place">
+        <h3>La Prairie au Duc</h3>
+        <p>A modern green space in the heart of the island project, featuring urban art and river views.</p>
+        <div class="pro-tip">💡 Tip: Perfect for a relaxing afternoon walk or watching the sunset over the Loire.</div>
+    </div>
+</div>
+
+<h2 class="gastro-h2">Top 10 Best Places to Eat in Nantes</h2>
+<div class="grid-cards">
+    <div class="card card-gastro">
+        <h3>L’Atlantide 1874</h3>
+        <p>A Michelin-starred restaurant offering breathtaking views of the river and elite gastronomy.</p>
+        <div class="pro-tip">💰 Price: Luxury. The pinnacle of fine dining in Nantes.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Maison Guého</h3>
+        <p>Sophisticated French cuisine served in an elegant setting. Famous for its precision and flavor.</p>
+        <div class="pro-tip">💰 Price: Luxury. Perfect for high-end food lovers.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>L’U.Ni</h3>
+        <p>Creative and contemporary restaurant offering an accessible gourmet tasting menu.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Highly innovative with fresh local produce.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Bouchon</h3>
+        <p>Refined regional cooking in a cozy, welcoming atmosphere. Great quality-price balance.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Excellent service and local flavors.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Fabrik</h3>
+        <p>Modern French cuisine with a relaxed, industrial-chic vibe. Popular with a younger crowd.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Good for groups and casual dinners.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Cigale</h3>
+        <p>A historic brasserie with a breathtaking Art Nouveau interior. An architectural must-see.</p>
+        <div class="pro-tip">💰 Price: Budget / Mid. Even just for a coffee, the decor is worth the visit.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Nid</h3>
+        <p>Located on the 32nd floor of the Brittany Tower, offering snacks and 360-degree city views.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. The most famous bar/viewpoint in Nantes.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Crêperie du Vieux Nantes</h3>
+        <p>Authentic Breton crêpes and galettes served in a charming, traditional setting.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. A true taste of the region.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>L’Entrecôte</h3>
+        <p>A simple, classic bistrot specialized in steak frites with their secret signature sauce.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. No reservations, so arrive early!</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Aux Tours de l’Île</h3>
+        <p>Delicious sandwiches and quick local bites. Perfect for travelers on the move.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Quality fast food with a local touch.</div>
+    </div>
+</div>
+
+<h2>Nantes Travel Itineraries – 1, 3 & 7 Day Guides</h2>
+
+<div class="itinerary-box">
+    <span class="day-label">⏱️ 1-Day Highlights</span>
+    <h3>The Best of Nantes</h3>
+    <p>
+        <strong>09:00:</strong> Château des Ducs de Bretagne – Explore the medieval fortress.<br>
+        <strong>11:00:</strong> St. Pierre and St. Paul Cathedral – Marvel at the Gothic architecture.<br>
+        <strong>12:30:</strong> Lunch at Crêperie du Vieux Nantes – Traditional galettes.<br>
+        <strong>14:00:</strong> Les Machines de l’île – Witness the Giant Elephant and mechanical art.<br>
+        <strong>16:00:</strong> Jardin des Plantes – Relax in the botanical gardens.<br>
+        <strong>19:00:</strong> Dinner at L’U.Ni – Modern creative cuisine.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🥂 Weekend Escape</span>
+    <h3>3 Days: History, Art & Nature</h3>
+    <p>
+        <strong>Day 1:</strong> Historic Center. Castle, Cathedral, and the Bouffay district. Dinner at La Cigale.<br>
+        <strong>Day 2:</strong> Machines & River. Les Machines de l’île, Passage Pommeraye, and Hangar à Bananes. Dinner at Le Bouchon.<br>
+        <strong>Day 3:</strong> Parks & Peace. Jardin des Plantes, Île de Versailles, and a farewell dinner at Maison Guého.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🏙️ 7-Day Discovery</span>
+    <h3>The Ultimate Nantes & Loire Experience</h3>
+    <p>
+        <strong>Day 1:</strong> Castle and Cathedral highlights.<br>
+        <strong>Day 2:</strong> Medieval Bouffay exploration and Passage Pommeraye shopping.<br>
+        <strong>Day 3:</strong> Full immersion at Les Machines de l’île and Hangar à Bananes nightlife.<br>
+        <strong>Day 4:</strong> Garden hopping: Jardin des Plantes and the Japanese island.<br>
+        <strong>Day 5:</strong> Modern Nantes: La Prairie au Duc and a Loire river cruise.<br>
+        <strong>Day 6:</strong> Local Gastronomy. Market visits and trying local Muscadet wine.<br>
+        <strong>Day 7:</strong> Farewell. A relaxing day followed by a Michelin-star dinner at L’Atlantide 1874.
+    </p>
+</div>
+
+<div class="booking-section">
+    <h2>Planning your visit to Nantes?</h2>
+    <p>Find the best accommodation for your 2026 stay:</p>
+    <div class="booking-grid">
+        <div class="booking-card">
+            <h4>Budget Friendly</h4>
+            <p>Modern hotels and vibrant hostels near the train station or Cite des Congres.</p>
+            <a href="#" class="book-btn btn-budget">Check Cheap Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Mid-Range Comfort</h4>
+            <p>Stylish boutique hotels in the heart of the Bouffay district.</p>
+            <a href="#" class="book-btn btn-mid">Check Best Value Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Luxury Selection</h4>
+            <p>Historic 5-star experiences and chic lofts overlooking the Loire river.</p>
+            <a href="#" class="book-btn btn-luxury">Check Luxury Hotels</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="cookies.html">Cookies Policy</a>
+    </div>
+    <span class="footer-brand">THINGS TO DO FRANCE</span>
+    <p>© 2026 thingstodofrance.com | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

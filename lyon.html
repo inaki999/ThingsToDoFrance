@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Do in Lyon 2026 | Gastronomy Capital & Historic Landmarks</title>
+    <meta name="description" content="Discover Lyon 2026: The World Capital of Gastronomy. Top 10 sites, famous Bouchons, and detailed 1, 3, and 7-day itineraries.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --bg-dark: #0f172a;
+            --accent-blue: #60a5fa;
+            --accent-gold: #fbbf24;
+            --accent-green: #4ade80;
+            --text-light: #f1f5f9;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body { margin: 0; font-family: 'Roboto', sans-serif; color: var(--text-light); background: var(--bg-dark); line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* --- NAVIGATION --- */
+        nav { 
+            position: fixed; top: 0; width: 100%; height: 70px; 
+            background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); 
+            z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); 
+            display: flex; align-items: center; justify-content: space-between; 
+            padding: 0 5%; box-sizing: border-box; 
+        }
+        .logo-nav { font-family: 'Poppins'; font-weight: 700; color: #fff; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; align-items: center; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent-blue); }
+
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn { background: none; border: none; color: #fff; font-family: inherit; font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 5px; height: 70px; }
+        .dropdown-content { display: none; position: absolute; background-color: #1e293b; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); border-radius: 12px; overflow: hidden; top: 70px; right: 0; border: 1px solid rgba(255,255,255,0.1); }
+        .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
+        .dropdown-content a:hover { background-color: var(--accent-blue); }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        /* --- HERO (Consistente con Paris y Marseille) --- */
+        .hero { 
+            height: 50vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,1)), 
+                        url('https://images.unsplash.com/photo-1667212854845-60af5534353f?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+            background-size: cover; 
+            background-position: center; 
+            text-align: center; 
+            padding-top: 70px;
+        }
+        .hero h1 { font-family: 'Poppins'; font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; color: var(--accent-blue); margin-top: 10px; font-weight: 500; }
+        
+        /* --- CONTAINER --- */
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+        h2 { font-family: 'Poppins'; font-size: 2rem; border-left: 5px solid var(--accent-blue); padding-left: 20px; margin: 60px 0 30px; text-transform: uppercase; }
+        .gastro-h2 { border-color: var(--accent-gold); }
+
+        /* --- GRID CARDS --- */
+        .grid-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+        .card { 
+            background: var(--glass); border-radius: 15px; padding: 20px; 
+            border: 1px solid rgba(255,255,255,0.1); transition: 0.4s ease; 
+            display: flex; flex-direction: column; justify-content: space-between; font-size: 0.9rem;
+        }
+        .card-place:hover { border-color: var(--accent-blue); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(96, 165, 250, 0.1); }
+        .card-place h3 { color: var(--accent-blue); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .card-gastro { border: 1px solid rgba(251, 191, 36, 0.1); }
+        .card-gastro:hover { border-color: var(--accent-gold); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(251, 191, 36, 0.1); }
+        .card-gastro h3 { color: var(--accent-gold); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .pro-tip { font-size: 0.8rem; color: #94a3b8; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); font-style: italic; }
+
+        /* --- ITINERARIES --- */
+        .itinerary-box { background: rgba(255, 255, 255, 0.02); border-radius: 20px; padding: 30px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .itinerary-box h3 { font-family: 'Poppins'; margin-top: 10px; }
+        .day-label { color: var(--accent-gold); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; }
+
+        /* --- BOOKING SECTION --- */
+        .booking-section { background: rgba(30, 41, 59, 0.5); border-radius: 20px; padding: 40px; border: 1px solid var(--accent-blue); margin: 80px 0 40px; text-align: center; }
+        .booking-section h2 { border-left: none; padding-left: 0; margin-top: 0; }
+        .booking-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px; }
+        .booking-card { background: rgba(15, 23, 42, 0.5); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); }
+        .booking-card h4 { margin-top: 0; font-family: 'Poppins'; color: #fff; }
+        .book-btn { 
+            display: block; width: 100%; padding: 12px; text-align: center; text-decoration: none; 
+            border-radius: 8px; font-weight: 700; margin-top: 15px; transition: 0.3s; box-sizing: border-box;
+        }
+        .btn-budget { background: var(--accent-green); color: #000; }
+        .btn-mid { background: var(--accent-blue); color: #fff; }
+        .btn-luxury { background: var(--accent-gold); color: #000; }
+        .book-btn:hover { transform: scale(1.03); filter: brightness(1.1); }
+
+        /* --- FOOTER --- */
+        footer { padding: 60px 20px 30px; text-align: center; background: #0f172a; border-top: 1px solid rgba(59, 130, 246, 0.1); color: #94a3b8; }
+        .footer-links { margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .footer-links a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .footer-links a:hover { color: var(--accent-blue); }
+        .footer-brand { font-family: 'Poppins', sans-serif; color: #fff; font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; display: block; }
+
+        @media (max-width: 1100px) { .grid-cards { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .nav-links { display: none; } .grid-cards { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .grid-cards { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo-nav">THINGS TO DO FRANCE</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <button class="dropbtn">Cities ▼</button>
+            <div class="dropdown-content">
+                <a href="paris.html">Paris</a>
+                <a href="nice.html">Nice</a>
+                <a href="cannes.html">Cannes</a>
+                <a href="marseille.html">Marseille</a>
+                <a href="lyon.html">Lyon</a>
+                <a href="bordeaux.html">Bordeaux</a>
+                <a href="strasbourg.html">Strasbourg</a>
+                <a href="toulouse.html">Toulouse</a>
+                <a href="annecy.html">Annecy</a>
+                <a href="lille.html">Lille</a>
+                <a href="nantes.html">Nantes</a>
+                <a href="montpellier.html">Montpellier</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <h1>Lyon 2026</h1>
+    <p>The World Capital of Gastronomy & Renaissance History</p>
+</header>
+
+<div class="container">
+
+<h2>Top 10 Must-Visit Places in Lyon</h2>
+<div class="grid-cards">
+    <div class="card card-place">
+        <h3>Vieux Lyon</h3>
+        <p>A Renaissance old town filled with narrow streets, artisanal shops, and the famous traboules.</p>
+        <div class="pro-tip">💡 Tip: Coffee at a terrace on Rue du Boeuf is a local favorite.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Basilique Notre-Dame</h3>
+        <p>A stunning hilltop basilica at Fourvière offering panoramic views of the entire city.</p>
+        <div class="pro-tip">💡 Tip: Take the funicular up to save energy for exploring the gardens.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Parc de la Tête d’Or</h3>
+        <p>Lyon's vast urban park featuring a botanical garden, a lake, and a free zoo.</p>
+        <div class="pro-tip">💡 Tip: Rent a small boat on the lake for a relaxing afternoon.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Place Bellecour</h3>
+        <p>One of the largest pedestrian squares in Europe, located in the heart of the Presqu’île.</p>
+        <div class="pro-tip">💡 Tip: Look for the statue of Saint-Exupéry and the Little Prince in the corner.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Musée des Beaux-Arts</h3>
+        <p>Housed in a former abbey, it holds one of the most important art collections in Europe.</p>
+        <div class="pro-tip">💡 Tip: The museum's quiet courtyard garden is a hidden oasis.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Musée des Confluences</h3>
+        <p>A futuristic science and anthropology museum located where the Rhône and Saône rivers meet.</p>
+        <div class="pro-tip">💡 Tip: The architecture alone is worth the tram ride to the tip of the peninsula.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Croix-Rousse</h3>
+        <p>The historic silk-weavers' district, known for its creative vibe and village-like atmosphere.</p>
+        <div class="pro-tip">💡 Tip: Visit the local market for the freshest products in Lyon.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Cathédrale Saint-Jean</h3>
+        <p>A Gothic masterpiece in the old town featuring a 14th-century astronomical clock.</p>
+        <div class="pro-tip">💡 Tip: Be there at 12:00, 14:00, or 15:00 to see the clock strike.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Mur des Canuts</h3>
+        <p>An enormous "trompe-l’oeil" mural that depicts the history and life of the silk workers.</p>
+        <div class="pro-tip">💡 Tip: It's one of the largest painted walls in Europe—bring a wide lens!</div>
+    </div>
+    <div class="card card-place">
+        <h3>The Traboules</h3>
+        <p>Secret passageways connecting buildings, used historically by silk merchants.</p>
+        <div class="pro-tip">💡 Tip: Many are private; look for the "Traboule" signs and be respectful of residents.</div>
+    </div>
+</div>
+
+<h2 class="gastro-h2">Top 10 Places to Eat in Lyon</h2>
+<div class="grid-cards">
+    <div class="card card-gastro">
+        <h3>La Mère Brazier</h3>
+        <p>The ultimate historic restaurant with 2 Michelin stars, representing Lyon's culinary soul.</p>
+        <div class="pro-tip">💰 Price: Luxury. Peak of French gastronomic heritage.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Takao Takano</h3>
+        <p>Elegant and creative French haute cuisine with a modern Japanese influence.</p>
+        <div class="pro-tip">💰 Price: Luxury. Refined and visually stunning dishes.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Bouchon des Filles</h3>
+        <p>A classic Lyonnaise "Bouchon" with a lighter, modern feminine touch on tradition.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Warm atmosphere and excellent quality.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Les Halles Paul Bocuse</h3>
+        <p>The legendary indoor food market. Explore stalls for budget-friendly local snacks.</p>
+        <div class="pro-tip">💰 Price: Budget to Luxury. The "belly of Lyon."</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Poêlon d’Or</h3>
+        <p>Traditional market-fresh French cooking in a beautifully preserved 19th-century setting.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Authentic Lyonnaise experience.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Bistrot du Potager</h3>
+        <p>Exceptional traditional French cuisine served in a casual, accessible bistro style.</p>
+        <div class="pro-tip">💰 Price: Budget / Mid-range. Very popular with locals.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Garet</h3>
+        <p>A cozy spot for traditional dishes served with a contemporary, fresh perspective.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Famous for its friendly service.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Chez Mounier</h3>
+        <p>Authentic "Bouchon" style cooking at very affordable prices. Simple and delicious.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Great for student budgets.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Meunière</h3>
+        <p>A classic brasserie offering generous portions of Lyon's most famous traditional dishes.</p>
+        <div class="pro-tip">💰 Price: Budget / Mid-range. Iconic and lively.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Sud</h3>
+        <p>Mediterranean-inspired tapas and dishes in a relaxed, sun-filled atmosphere near Bellecour.</p>
+        <div class="pro-tip">💰 Price: Budget / Mid-range. Perfect for groups.</div>
+    </div>
+</div>
+
+<h2>Ultimate Lyon Travel Itineraries – 1, 3 & 7 Day Guides</h2>
+
+<div class="itinerary-box">
+    <span class="day-label">⏱️ 1-Day Highlights</span>
+    <h3>The Perfect Introduction to Lyon</h3>
+    <p>
+        <strong>09:00:</strong> Vieux Lyon – Explore the old town and discover secret traboules.<br>
+        <strong>11:30:</strong> Fourvière – Take the funicular up to the Basilica for city-wide views.<br>
+        <strong>13:00:</strong> Lunch at Les Halles de Lyon Paul Bocuse – The ultimate gourmet market experience.<br>
+        <strong>15:00:</strong> Musée des Beaux-Arts – Admire fine art in a historic palace.<br>
+        <strong>17:30:</strong> Parc de la Tête d’Or – Evening stroll through the gardens and lake.<br>
+        <strong>19:30:</strong> Dinner at Bouchon des Filles – End the day with authentic Lyonnaise food.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🍷 Weekend City Break</span>
+    <h3>3 Days of Culture & Gastronomy</h3>
+    <p>
+        <strong>Day 1:</strong> Historical Heart. Vieux Lyon, Saint-Jean Cathedral, Mur des Canuts. Dinner at Le Garet.<br>
+        <strong>Day 2:</strong> Art & Views. Fourvière Basilica morning, Museum of Fine Arts afternoon. Dinner at Le Sud.<br>
+        <strong>Day 3:</strong> Foodie Day. Full morning at Les Halles Paul Bocuse, explore more traboules. Farewell dinner at La Mère Brazier.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🏰 7-Day In-Depth Trip</span>
+    <h3>A Full Week in the Capital of Flavors</h3>
+    <p>
+        <strong>Day 1:</strong> Vieux Lyon & Saint-Jean exploration. Casual dinner at Bistrot du Potager.<br>
+        <strong>Day 2:</strong> Culture immersion at Musée des Beaux-Arts and shopping at Presqu’île.<br>
+        <strong>Day 3:</strong> Panoramic day at Fourvière and relaxation at Parc de la Tête d’Or.<br>
+        <strong>Day 4:</strong> Ultimate foodie day! Market tastings and workshops at Les Halles Paul Bocuse.<br>
+        <strong>Day 5:</strong> Day trip to the medieval village of Pérouges (nearby cobble-stone gem).<br>
+        <strong>Day 6:</strong> Modern Lyon. Musée des Confluences and sunset by the Saône. Dinner at Takao Takano.<br>
+        <strong>Day 7:</strong> Village vibes at Croix-Rousse, artisanal shopping, and final traditional Bouchon dinner.
+    </p>
+</div>
+
+<div class="booking-section">
+    <h2>Planning your stay in Lyon?</h2>
+    <p>Compare the best accommodation for your 2026 trip:</p>
+    <div class="booking-grid">
+        <div class="booking-card">
+            <h4>Budget Friendly</h4>
+            <p>Modern hostels and cozy apartments in the 7th or 3rd arrondissements.</p>
+            <a href="#" class="book-btn btn-budget">Check Cheap Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Mid-Range Comfort</h4>
+            <p>Boutique hotels in the Presqu'île or stylish lofts in Croix-Rousse.</p>
+            <a href="#" class="book-btn btn-mid">Check Best Value Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Luxury & Suites</h4>
+            <p>5-star palace experiences at Villa Florentine or InterContinental Hôtel Dieu.</p>
+            <a href="#" class="book-btn btn-luxury">Check Luxury Hotels</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="cookies.html">Cookies Policy</a>
+    </div>
+    <span class="footer-brand">THINGS TO DO FRANCE</span>
+    <p>© 2026 thingstodofrance.com | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Do in Bordeaux 2026 | Wine Capital & Historic Elegance</title>
+    <meta name="description" content="Explore Bordeaux 2026: The world's wine capital. Top 10 attractions, best wine bars, and detailed 1, 3, and 7-day itineraries.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --bg-dark: #0f172a;
+            --accent-blue: #60a5fa;
+            --accent-gold: #fbbf24;
+            --accent-green: #4ade80;
+            --text-light: #f1f5f9;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body { margin: 0; font-family: 'Roboto', sans-serif; color: var(--text-light); background: var(--bg-dark); line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* --- NAVIGATION --- */
+        nav { 
+            position: fixed; top: 0; width: 100%; height: 70px; 
+            background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); 
+            z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); 
+            display: flex; align-items: center; justify-content: space-between; 
+            padding: 0 5%; box-sizing: border-box; 
+        }
+        .logo-nav { font-family: 'Poppins'; font-weight: 700; color: #fff; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; align-items: center; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent-blue); }
+
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn { background: none; border: none; color: #fff; font-family: inherit; font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 5px; height: 70px; }
+        .dropdown-content { display: none; position: absolute; background-color: #1e293b; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); border-radius: 12px; overflow: hidden; top: 70px; right: 0; border: 1px solid rgba(255,255,255,0.1); }
+        .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
+        .dropdown-content a:hover { background-color: var(--accent-blue); }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        /* --- HERO --- */
+        .hero { 
+            height: 50vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,1)), 
+                        url('https://images.unsplash.com/photo-1493564738392-d148cfbd6eda?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+            background-size: cover; 
+            background-position: center; 
+            text-align: center; 
+            padding-top: 70px;
+        }
+        .hero h1 { font-family: 'Poppins'; font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; color: var(--accent-blue); margin-top: 10px; font-weight: 500; }
+        
+        /* --- CONTAINER --- */
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+        h2 { font-family: 'Poppins'; font-size: 2rem; border-left: 5px solid var(--accent-blue); padding-left: 20px; margin: 60px 0 30px; text-transform: uppercase; }
+        .gastro-h2 { border-color: var(--accent-gold); }
+
+        /* --- GRID CARDS --- */
+        .grid-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+        .card { 
+            background: var(--glass); border-radius: 15px; padding: 20px; 
+            border: 1px solid rgba(255,255,255,0.1); transition: 0.4s ease; 
+            display: flex; flex-direction: column; justify-content: space-between; font-size: 0.9rem;
+        }
+        .card-place:hover { border-color: var(--accent-blue); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(96, 165, 250, 0.1); }
+        .card-place h3 { color: var(--accent-blue); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .card-gastro { border: 1px solid rgba(251, 191, 36, 0.1); }
+        .card-gastro:hover { border-color: var(--accent-gold); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(251, 191, 36, 0.1); }
+        .card-gastro h3 { color: var(--accent-gold); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .pro-tip { font-size: 0.8rem; color: #94a3b8; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); font-style: italic; }
+
+        /* --- ITINERARIES --- */
+        .itinerary-box { background: rgba(255, 255, 255, 0.02); border-radius: 20px; padding: 30px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .day-label { color: var(--accent-gold); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; }
+
+        /* --- BOOKING SECTION --- */
+        .booking-section { background: rgba(30, 41, 59, 0.5); border-radius: 20px; padding: 40px; border: 1px solid var(--accent-blue); margin: 80px 0 40px; text-align: center; }
+        .booking-section h2 { border-left: none; padding-left: 0; margin-top: 0; }
+        .booking-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px; }
+        .booking-card { background: rgba(15, 23, 42, 0.5); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); }
+        .booking-card h4 { margin-top: 0; font-family: 'Poppins'; color: #fff; }
+        .book-btn { 
+            display: block; width: 100%; padding: 12px; text-align: center; text-decoration: none; 
+            border-radius: 8px; font-weight: 700; margin-top: 15px; transition: 0.3s; box-sizing: border-box;
+        }
+        .btn-budget { background: var(--accent-green); color: #000; }
+        .btn-mid { background: var(--accent-blue); color: #fff; }
+        .btn-luxury { background: var(--accent-gold); color: #000; }
+        .book-btn:hover { transform: scale(1.03); filter: brightness(1.1); }
+
+        /* --- FOOTER --- */
+        footer { padding: 60px 20px 30px; text-align: center; background: #0f172a; border-top: 1px solid rgba(59, 130, 246, 0.1); color: #94a3b8; }
+        .footer-links { margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .footer-links a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .footer-links a:hover { color: var(--accent-blue); }
+        .footer-brand { font-family: 'Poppins', sans-serif; color: #fff; font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; display: block; }
+
+        @media (max-width: 1100px) { .grid-cards { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .nav-links { display: none; } .grid-cards { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .grid-cards { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo-nav">THINGS TO DO FRANCE</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <button class="dropbtn">Cities ▼</button>
+            <div class="dropdown-content">
+                <a href="paris.html">Paris</a>
+                <a href="nice.html">Nice</a>
+                <a href="cannes.html">Cannes</a>
+                <a href="marseille.html">Marseille</a>
+                <a href="lyon.html">Lyon</a>
+                <a href="bordeaux.html">Bordeaux</a>
+                <a href="strasbourg.html">Strasbourg</a>
+                <a href="toulouse.html">Toulouse</a>
+                <a href="annecy.html">Annecy</a>
+                <a href="lille.html">Lille</a>
+                <a href="nantes.html">Nantes</a>
+                <a href="montpellier.html">Montpellier</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <h1>Bordeaux 2026</h1>
+    <p>Fine Wine, Historic Grandeur & Riverside Living</p>
+</header>
+
+<div class="container">
+
+<h2>Top 10 Must-Visit Places in Bordeaux</h2>
+<div class="grid-cards">
+    <div class="card card-place">
+        <h3>Place de la Bourse</h3>
+        <p>The city's iconic square featuring the stunning "Miroir d'Eau," the world's largest reflecting pool.</p>
+        <div class="pro-tip">💡 Tip: Visit at night to see the architecture perfectly mirrored in the water.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Cathédrale Saint-André</h3>
+        <p>A grand Gothic cathedral where royal weddings took place; its separate bell tower offers 360° views.</p>
+        <div class="pro-tip">💡 Tip: Climb the Pey-Berland tower for the best city panorama.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Rue Sainte-Catherine</h3>
+        <p>Stretching over 1.2km, it is officially the longest pedestrian shopping street in Europe.</p>
+        <div class="pro-tip">💡 Tip: Explore the side streets for quieter, independent boutiques.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Cité du Vin</h3>
+        <p>An ultra-modern, interactive museum exploring the global history and culture of wine.</p>
+        <div class="pro-tip">💡 Tip: Your ticket includes a glass of wine at the rooftop Belvédère.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Pont de Pierre</h3>
+        <p>The city's first bridge across the Garonne, commissioned by Napoleon with its 17 characteristic arches.</p>
+        <div class="pro-tip">💡 Tip: Walk across at sunset for a romantic view of the city skyline.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Quais de Bordeaux</h3>
+        <p>The beautifully renovated riverfront promenades, perfect for cycling, skating, or walking.</p>
+        <div class="pro-tip">💡 Tip: Rent a city bike (V3) and ride from the bridge to the Cité du Vin.</div>
+    </div>
+    <div class="card card-place">
+        <h3>CAPC Musée</h3>
+        <p>A contemporary art museum housed in a majestic former colonial warehouse.</p>
+        <div class="pro-tip">💡 Tip: The museum terrace is a peaceful spot for a midday break.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Jardin Public</h3>
+        <p>An 18th-century "English style" central park with a botanical garden and puppet theater.</p>
+        <div class="pro-tip">💡 Tip: Perfect place for a local-style picnic with cheese and baguette.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Chartrons District</h3>
+        <p>The former wine merchant quarter, now a bohemian neighborhood full of antiques and cafes.</p>
+        <div class="pro-tip">💡 Tip: Visit Rue Notre-Dame for the best antique shopping in France.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Marché des Capucins</h3>
+        <p>The "belly of Bordeaux," a lively market where you can taste the freshest local products.</p>
+        <div class="pro-tip">💡 Tip: Go early on Sunday for fresh oysters and white wine—a true local ritual.</div>
+    </div>
+</div>
+
+<h2 class="gastro-h2">Top 10 Culinary Experiences in Bordeaux</h2>
+<div class="grid-cards">
+    <div class="card card-gastro">
+        <h3>Le Pressoir d’Argent</h3>
+        <p>Gordon Ramsay's 2-Michelin star restaurant located in the InterContinental. Peak luxury.</p>
+        <div class="pro-tip">💰 Price: Luxury. World-class fine dining.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Grand’Vigne</h3>
+        <p>Located in the vineyards, this 2-star restaurant focus on the perfect marriage of food and wine.</p>
+        <div class="pro-tip">💰 Price: Luxury. An immersive wine-country experience.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Bouchon Bordelais</h3>
+        <p>A friendly, traditional spot serving high-quality regional dishes at fair prices.</p>
+        <div class="pro-tip">💰 Price: Budget / Mid-range. Best value for local flavors.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Bar à Vin des Quais</h3>
+        <p>Enjoy local tapas and a huge selection of Bordeaux wines right by the Garonne river.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Perfect for sunset wine tasting.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Chien de Pavlov</h3>
+        <p>Creative and modern French cooking using local seasonal ingredients in a trendy setting.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Highly recommended for foodies.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Brasserie Bordelaise</h3>
+        <p>A bustling institution famous for its meat dishes and massive wine cellar.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Essential Bordeaux atmosphere.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Chez Dupont</h3>
+        <p>A quintessential French bistro in the heart of the Chartrons district. Classic and reliable.</p>
+        <div class="pro-tip">💰 Price: Budget / Mid-range. A local favorite for lunch.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Pasta Vino & Co.</h3>
+        <p>Excellent fresh pasta and Italian wines for those looking for a great meal on a budget.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. High quality without the high price tag.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Cabane de l’Huitre</h3>
+        <p>The best place for fresh oysters and seafood platters at reasonable prices near the water.</p>
+        <div class="pro-tip">💰 Price: Budget / Mid-range. Fresh from the Atlantic.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Belle Campagne</h3>
+        <p>A "farm-to-table" concept where everything is sourced locally within a few kilometers.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Sustainable and delicious.</div>
+    </div>
+</div>
+
+<h2>Ultimate Bordeaux Travel Itineraries – 1, 3 & 7 Day Guides</h2>
+
+<div class="itinerary-box">
+    <span class="day-label">⏱️ 1-Day Express</span>
+    <h3>Bordeaux Highlights in a Day</h3>
+    <p>
+        <strong>09:00:</strong> Place de la Bourse & Water Mirror – Start with the most famous photo spot.<br>
+        <strong>10:30:</strong> Rue Sainte-Catherine – Walk the shopping mile and explore the city center.<br>
+        <strong>12:30:</strong> Lunch at Bar à Vin des Quais – Tapas and wine with river views.<br>
+        <strong>14:00:</strong> Cité du Vin – Immerse yourself in the history of wine (2-3 hours).<br>
+        <strong>16:30:</strong> Pont de Pierre & Riverside Walk – Enjoy the Garonne breeze.<br>
+        <strong>19:00:</strong> Dinner at La Brasserie Bordelaise – Experience the city's vibrant dining scene.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🥂 Weekend Escape</span>
+    <h3>3 Days: Wine, Arts & Markets</h3>
+    <p>
+        <strong>Day 1:</strong> City Landmarks. Water Mirror, shopping, Cité du Vin, and dinner at Le Chien de Pavlov.<br>
+        <strong>Day 2:</strong> Chartrons & Culture. Morning antiques at Rue Notre-Dame, brunch at Marché des Capucins, afternoon at CAPC Museum. Fine dining dinner at Le Pressoir d’Argent.<br>
+        <strong>Day 3:</strong> Nature & Relaxation. Picnic at Jardin Public, bike ride along the Quais, oyster lunch at La Cabane, and farewell dinner at La Grand’Vigne.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🏰 7-Day Wine Immersion</span>
+    <h3>The Complete Bordeaux & Beyond Experience</h3>
+    <p>
+        <strong>Day 1:</strong> City Highlights – Water mirror, cathedral, and vibrant city squares.<br>
+        <strong>Day 2:</strong> Art & History – Contemporary art museum and the old town's hidden alleys.<br>
+        <strong>Day 3:</strong> Local Flavors – Food markets, urban wine cellars, and riverside tapas.<br>
+        <strong>Day 4:</strong> Médoc Excursion – Full day tour of the famous Châteaux and vineyards.<br>
+        <strong>Day 5:</strong> Saint-Émilion – Visit the medieval underground church and world-class wineries.<br>
+        <strong>Day 6:</strong> Relaxation & Parks – Garden picnics and high-end gastronomy.<br>
+        <strong>Day 7:</strong> Farewell – Last minute souvenir shopping at Sainte-Catherine and a river cruise.
+    </p>
+</div>
+
+<div class="booking-section">
+    <h2>Planning your stay in Bordeaux?</h2>
+    <p>Compare the best accommodation for your 2026 trip:</p>
+    <div class="booking-grid">
+        <div class="booking-card">
+            <h4>Budget Friendly</h4>
+            <p>Modern hostels and guesthouses near Saint-Jean Station or Capucins.</p>
+            <a href="#" class="book-btn btn-budget">Check Cheap Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Mid-Range Comfort</h4>
+            <p>Elegant boutique hotels in the Chartrons or the Triangle d'Or.</p>
+            <a href="#" class="book-btn btn-mid">Check Best Value Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Luxury & Châteaux</h4>
+            <p>5-star grand hotels or stays in nearby vineyard estates.</p>
+            <a href="#" class="book-btn btn-luxury">Check Luxury Hotels</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="cookies.html">Cookies Policy</a>
+    </div>
+    <span class="footer-brand">THINGS TO DO FRANCE</span>
+    <p>© 2026 thingstodofrance.com | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

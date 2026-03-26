@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Do in Montpellier 2026 | Sun, History & Modern Design</title>
+    <meta name="description" content="Discover Montpellier 2026: The stylish capital of Occitanie. Top 10 attractions, Musée Fabre, and the best Mediterranean gastronomy.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --bg-dark: #0f172a;
+            --accent-blue: #60a5fa;
+            --accent-gold: #fbbf24;
+            --accent-green: #4ade80;
+            --text-light: #f1f5f9;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body { margin: 0; font-family: 'Roboto', sans-serif; color: var(--text-light); background: var(--bg-dark); line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* --- NAVIGATION --- */
+        nav { 
+            position: fixed; top: 0; width: 100%; height: 70px; 
+            background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); 
+            z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); 
+            display: flex; align-items: center; justify-content: space-between; 
+            padding: 0 5%; box-sizing: border-box; 
+        }
+        .logo-nav { font-family: 'Poppins'; font-weight: 700; color: #fff; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; align-items: center; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent-blue); }
+
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn { background: none; border: none; color: #fff; font-family: inherit; font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 5px; height: 70px; }
+        .dropdown-content { display: none; position: absolute; background-color: #1e293b; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); border-radius: 12px; overflow: hidden; top: 70px; right: 0; border: 1px solid rgba(255,255,255,0.1); }
+        .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
+        .dropdown-content a:hover { background-color: var(--accent-blue); }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        /* --- HERO --- */
+        .hero { 
+            height: 50vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,1)), 
+                        url('https://images.unsplash.com/photo-1659477625198-177c640ce921?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+            background-size: cover; 
+            background-position: center; 
+            text-align: center; 
+            padding-top: 70px;
+        }
+        .hero h1 { font-family: 'Poppins'; font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; color: var(--accent-blue); margin-top: 10px; font-weight: 500; }
+        
+        /* --- CONTAINER --- */
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+        h2 { font-family: 'Poppins'; font-size: 2rem; border-left: 5px solid var(--accent-blue); padding-left: 20px; margin: 60px 0 30px; text-transform: uppercase; }
+        .gastro-h2 { border-color: var(--accent-gold); }
+
+        /* --- GRID CARDS --- */
+        .grid-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+        .card { 
+            background: var(--glass); border-radius: 15px; padding: 20px; 
+            border: 1px solid rgba(255,255,255,0.1); transition: 0.4s ease; 
+            display: flex; flex-direction: column; justify-content: space-between; font-size: 0.9rem;
+        }
+        .card-place:hover { border-color: var(--accent-blue); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(96, 165, 250, 0.1); }
+        .card-place h3 { color: var(--accent-blue); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .card-gastro { border: 1px solid rgba(251, 191, 36, 0.1); }
+        .card-gastro:hover { border-color: var(--accent-gold); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(251, 191, 36, 0.1); }
+        .card-gastro h3 { color: var(--accent-gold); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .pro-tip { font-size: 0.8rem; color: #94a3b8; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); font-style: italic; }
+
+        /* --- ITINERARIES --- */
+        .itinerary-box { background: rgba(255, 255, 255, 0.02); border-radius: 20px; padding: 30px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .day-label { color: var(--accent-gold); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; }
+
+        /* --- BOOKING SECTION --- */
+        .booking-section { background: rgba(30, 41, 59, 0.5); border-radius: 20px; padding: 40px; border: 1px solid var(--accent-blue); margin: 80px 0 40px; text-align: center; }
+        .booking-section h2 { border-left: none; padding-left: 0; margin-top: 0; }
+        .booking-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px; }
+        .booking-card { background: rgba(15, 23, 42, 0.5); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); }
+        .booking-card h4 { margin-top: 0; font-family: 'Poppins'; color: #fff; }
+        .book-btn { 
+            display: block; width: 100%; padding: 12px; text-align: center; text-decoration: none; 
+            border-radius: 8px; font-weight: 700; margin-top: 15px; transition: 0.3s; box-sizing: border-box;
+        }
+        .btn-budget { background: var(--accent-green); color: #000; }
+        .btn-mid { background: var(--accent-blue); color: #fff; }
+        .btn-luxury { background: var(--accent-gold); color: #000; }
+        .book-btn:hover { transform: scale(1.03); filter: brightness(1.1); }
+
+        /* --- FOOTER --- */
+        footer { padding: 60px 20px 30px; text-align: center; background: #0f172a; border-top: 1px solid rgba(59, 130, 246, 0.1); color: #94a3b8; }
+        .footer-links { margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .footer-links a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .footer-links a:hover { color: var(--accent-blue); }
+        .footer-brand { font-family: 'Poppins', sans-serif; color: #fff; font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; display: block; }
+
+        @media (max-width: 1100px) { .grid-cards { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .nav-links { display: none; } .grid-cards { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .grid-cards { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo-nav">THINGS TO DO FRANCE</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <button class="dropbtn">Cities ▼</button>
+            <div class="dropdown-content">
+                <a href="paris.html">Paris</a>
+                <a href="nice.html">Nice</a>
+                <a href="cannes.html">Cannes</a>
+                <a href="marseille.html">Marseille</a>
+                <a href="lyon.html">Lyon</a>
+                <a href="bordeaux.html">Bordeaux</a>
+                <a href="strasbourg.html">Strasbourg</a>
+                <a href="toulouse.html">Toulouse</a>
+                <a href="annecy.html">Annecy</a>
+                <a href="lille.html">Lille</a>
+                <a href="nantes.html">Nantes</a>
+                <a href="montpellier.html">Montpellier</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <h1>Montpellier 2026</h1>
+    <p>The Mediterranean Gem: Where Medieval Alleys Meet Bold Architecture</p>
+</header>
+
+<div class="container">
+
+<h2>Top 10 Must-Visit Places in Montpellier</h2>
+<div class="grid-cards">
+    <div class="card card-place">
+        <h3>Place de la Comédie</h3>
+        <p>The vibrant heart of the city, dominated by the Opéra Comédie and the Three Graces fountain.</p>
+        <div class="pro-tip">💡 Tip: It's one of the largest pedestrian squares in Europe—perfect for people-watching.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Promenade du Peyrou</h3>
+        <p>A grand royal square offering panoramic views of the city and the Saint-Clément Aqueduct.</p>
+        <div class="pro-tip">💡 Tip: Best visited at sunset for golden hour views over the city roofs.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Musée Fabre</h3>
+        <p>A premier fine arts museum with a massive collection ranging from the Renaissance to modern masters.</p>
+        <div class="pro-tip">💡 Tip: Don't miss the Soulages wing with its iconic "outrenoir" black paintings.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Saint-Pierre Cathedral</h3>
+        <p>An imposing Gothic cathedral featuring two unique monumental pillars that look like rocket towers.</p>
+        <div class="pro-tip">💡 Tip: Entry is free, and the interior's high vaults are truly awe-inspiring.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Jardin des Plantes</h3>
+        <p>Founded in 1593, this is the oldest botanical garden in France and a peaceful green haven.</p>
+        <div class="pro-tip">💡 Tip: Look for the 'wishing tree' where locals leave secret messages in the bark.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Antigone District</h3>
+        <p>A stunning modern neighborhood designed by Ricardo Bofill, inspired by Neoclassical Roman architecture.</p>
+        <div class="pro-tip">💡 Tip: Walk from the Polygone mall down to the Lez river to see the scale of the design.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Le Château d’Eau</h3>
+        <p>An old water tower converted into a renowned center for contemporary photography.</p>
+        <div class="pro-tip">💡 Tip: Check their rotating exhibitions—they often feature world-class photographers.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Place Saint-Roch</h3>
+        <p>A charming, lively square in the old town, perfect for outdoor dining and local atmosphere.</p>
+        <div class="pro-tip">💡 Tip: The trompe-l’œil mural on the church square is a must-see artwork.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Écusson (Old Town)</h3>
+        <p>The historic center's pedestrian maze of limestone streets, chic boutiques, and hidden courtyards.</p>
+        <div class="pro-tip">💡 Tip: Get lost on purpose; it's the best way to find the coolest artisan shops.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Montpellier Zoo</h3>
+        <p>Located in the Parc de Lunaret, this large zoo offers free entry and houses species from all continents.</p>
+        <div class="pro-tip">💡 Tip: The Amazonian greenhouse is the only part that requires a small fee but is worth it.</div>
+    </div>
+</div>
+
+<h2 class="gastro-h2">Top 10 Best Places to Eat in Montpellier</h2>
+<div class="grid-cards">
+    <div class="card card-gastro">
+        <h3>Le Jardin des Sens</h3>
+        <p>A 2-star Michelin experience by the Pourcel brothers. Modern, high-end French gastronomy.</p>
+        <div class="pro-tip">💰 Price: Luxury. A world-renowned culinary temple.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Diligence</h3>
+        <p>Housed in a 14th-century vaulted cellar, offering refined seasonal gourmet dishes.</p>
+        <div class="pro-tip">💰 Price: Luxury. Romantic and historic atmosphere.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Les Caves de l’Opéra</h3>
+        <p>Modern French cuisine with an excellent wine list in a chic, subterranean setting.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Great quality for the price.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Petit Jardin Gastronomique</h3>
+        <p>Creative dishes served in a hidden garden oasis right in the heart of the old town.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Peaceful and very stylish.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>L’Entrecôte Montpelliéraine</h3>
+        <p>A local favorite specializing in perfectly cooked steaks and classic French bistro fare.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Generous portions and very consistent.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Petit Jardin (Bistro)</h3>
+        <p>The casual counterpart to the gastronomic side, offering fresh salads and light lunches.</p>
+        <div class="pro-tip">💰 Price: Budget / Mid. Perfect for a breezy outdoor lunch.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Maison de la Lozère</h3>
+        <p>Traditional regional cooking from the nearby Lozère mountains at very fair prices.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Hearty and authentic.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Crêperie La Gavotte</h3>
+        <p>Delicious Breton-style savory galettes and sweet crêpes in a cozy, friendly setting.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Ideal for a quick, quality bite.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Jardin des Sens (Lunch)</h3>
+        <p>The restaurant offers a simpler, market-fresh lunch menu that is more affordable.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly (Lunch). Michelin quality on a budget.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Bouchon Saint-Roch</h3>
+        <p>A warm, local bistrot serving homemade French comfort food near the Saint-Roch church.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Very popular with locals.</div>
+    </div>
+</div>
+
+<h2>Montpellier Travel Itineraries – 1, 3 & 7 Day Guides</h2>
+
+<div class="itinerary-box">
+    <span class="day-label">⏱️ 1-Day Highlights</span>
+    <h3>Best of the City</h3>
+    <p>
+        <strong>09:00:</strong> Place de la Comédie – Start with coffee at the opera square.<br>
+        <strong>11:00:</strong> Saint-Pierre Cathedral – Visit the Gothic monumental pillars.<br>
+        <strong>12:30:</strong> Lunch at La Maison de la Lozère – Regional mountain flavors.<br>
+        <strong>14:00:</strong> Musée Fabre – Explore one of France's top art collections.<br>
+        <strong>16:00:</strong> Promenade du Peyrou – Walk the terrace and see the aqueduct.<br>
+        <strong>19:00:</strong> Dinner at Les Caves de l’Opéra – Modern French dining.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🥂 Weekend City Break</span>
+    <h3>3 Days: History, Art & Design</h3>
+    <p>
+        <strong>Day 1:</strong> Historical Heart. Comédie square, Cathedral, and the Écusson streets. Dinner at Le Petit Jardin.<br>
+        <strong>Day 2:</strong> Art & Modernity. Musée Fabre, Antigone District walk, and Place Saint-Roch. Dinner at Le Petit Jardin Gastronomique.<br>
+        <strong>Day 3:</strong> Parks & Nature. Jardin des Plantes, afternoon at the Zoo, and a grand finale dinner at Le Jardin des Sens.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🏙️ 7-Day Experience</span>
+    <h3>The Ultimate Montpellier Explorer</h3>
+    <p>
+        <strong>Day 1:</strong> Comédie square and Cathedral orientation.<br>
+        <strong>Day 2:</strong> Deep dive into the Écusson old town and local markets.<br>
+        <strong>Day 3:</strong> Art Day: Musée Fabre and photography at Château d’Eau.<br>
+        <strong>Day 4:</strong> Architectural tour: From the Neoclassical Antigone to the modern Lez river area.<br>
+        <strong>Day 5:</strong> Green Montpellier: Botanical Gardens and Promenade du Peyrou strolls.<br>
+        <strong>Day 6:</strong> Family & Outdoors: Full day at the Zoo and Lunaret Park.<br>
+        <strong>Day 7:</strong> Gourmet Farewell. Souvenir shopping and a 2-star Michelin dinner.
+    </p>
+</div>
+
+<div class="booking-section">
+    <h2>Planning your stay in Montpellier?</h2>
+    <p>Find the perfect base for your 2026 Mediterranean trip:</p>
+    <div class="booking-grid">
+        <div class="booking-card">
+            <h4>Budget Friendly</h4>
+            <p>Modern stays near the Saint-Roch train station or the Antigone district.</p>
+            <a href="#" class="book-btn btn-budget">Check Cheap Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Mid-Range Comfort</h4>
+            <p>Boutique hotels hidden inside the historic Écusson pedestrian zone.</p>
+            <a href="#" class="book-btn btn-mid">Check Best Value Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Luxury & Heritage</h4>
+            <p>5-star mansions and high-end design hotels near the Place de la Comédie.</p>
+            <a href="#" class="book-btn btn-luxury">Check Luxury Hotels</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="cookies.html">Cookies Policy</a>
+    </div>
+    <span class="footer-brand">THINGS TO DO FRANCE</span>
+    <p>© 2026 thingstodofrance.com | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

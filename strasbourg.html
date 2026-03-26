@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Do in Strasbourg 2026 | The Capital of Europe & Alsace Heritage</title>
+    <meta name="description" content="Discover Strasbourg 2026: The crossroads of Europe. Top 10 sites, traditional Winstubs, and complete 1, 3, and 7-day itineraries.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --bg-dark: #0f172a;
+            --accent-blue: #60a5fa;
+            --accent-gold: #fbbf24;
+            --accent-green: #4ade80;
+            --text-light: #f1f5f9;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body { margin: 0; font-family: 'Roboto', sans-serif; color: var(--text-light); background: var(--bg-dark); line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* --- NAVIGATION --- */
+        nav { 
+            position: fixed; top: 0; width: 100%; height: 70px; 
+            background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); 
+            z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); 
+            display: flex; align-items: center; justify-content: space-between; 
+            padding: 0 5%; box-sizing: border-box; 
+        }
+        .logo-nav { font-family: 'Poppins'; font-weight: 700; color: #fff; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; align-items: center; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent-blue); }
+
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn { background: none; border: none; color: #fff; font-family: inherit; font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 5px; height: 70px; }
+        .dropdown-content { display: none; position: absolute; background-color: #1e293b; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); border-radius: 12px; overflow: hidden; top: 70px; right: 0; border: 1px solid rgba(255,255,255,0.1); }
+        .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
+        .dropdown-content a:hover { background-color: var(--accent-blue); }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        /* --- HERO --- */
+        .hero { 
+            height: 50vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,1)), 
+                        url('https://images.unsplash.com/photo-1686424702633-5ffa0d9f774a?q=80&w=1071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+            background-size: cover; 
+            background-position: center; 
+            text-align: center; 
+            padding-top: 70px;
+        }
+        .hero h1 { font-family: 'Poppins'; font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; color: var(--accent-blue); margin-top: 10px; font-weight: 500; }
+        
+        /* --- CONTAINER --- */
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+        h2 { font-family: 'Poppins'; font-size: 2rem; border-left: 5px solid var(--accent-blue); padding-left: 20px; margin: 60px 0 30px; text-transform: uppercase; }
+        .gastro-h2 { border-color: var(--accent-gold); }
+
+        /* --- GRID CARDS --- */
+        .grid-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+        .card { 
+            background: var(--glass); border-radius: 15px; padding: 20px; 
+            border: 1px solid rgba(255,255,255,0.1); transition: 0.4s ease; 
+            display: flex; flex-direction: column; justify-content: space-between; font-size: 0.9rem;
+        }
+        .card-place:hover { border-color: var(--accent-blue); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(96, 165, 250, 0.1); }
+        .card-place h3 { color: var(--accent-blue); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .card-gastro { border: 1px solid rgba(251, 191, 36, 0.1); }
+        .card-gastro:hover { border-color: var(--accent-gold); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(251, 191, 36, 0.1); }
+        .card-gastro h3 { color: var(--accent-gold); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .pro-tip { font-size: 0.8rem; color: #94a3b8; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); font-style: italic; }
+
+        /* --- ITINERARIES --- */
+        .itinerary-box { background: rgba(255, 255, 255, 0.02); border-radius: 20px; padding: 30px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .day-label { color: var(--accent-gold); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; }
+
+        /* --- BOOKING SECTION --- */
+        .booking-section { background: rgba(30, 41, 59, 0.5); border-radius: 20px; padding: 40px; border: 1px solid var(--accent-blue); margin: 80px 0 40px; text-align: center; }
+        .booking-section h2 { border-left: none; padding-left: 0; margin-top: 0; }
+        .booking-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px; }
+        .booking-card { background: rgba(15, 23, 42, 0.5); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); }
+        .booking-card h4 { margin-top: 0; font-family: 'Poppins'; color: #fff; }
+        .book-btn { 
+            display: block; width: 100%; padding: 12px; text-align: center; text-decoration: none; 
+            border-radius: 8px; font-weight: 700; margin-top: 15px; transition: 0.3s; box-sizing: border-box;
+        }
+        .btn-budget { background: var(--accent-green); color: #000; }
+        .btn-mid { background: var(--accent-blue); color: #fff; }
+        .btn-luxury { background: var(--accent-gold); color: #000; }
+        .book-btn:hover { transform: scale(1.03); filter: brightness(1.1); }
+
+        /* --- FOOTER --- */
+        footer { padding: 60px 20px 30px; text-align: center; background: #0f172a; border-top: 1px solid rgba(59, 130, 246, 0.1); color: #94a3b8; }
+        .footer-links { margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .footer-links a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .footer-links a:hover { color: var(--accent-blue); }
+        .footer-brand { font-family: 'Poppins', sans-serif; color: #fff; font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; display: block; }
+
+        @media (max-width: 1100px) { .grid-cards { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .nav-links { display: none; } .grid-cards { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .grid-cards { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo-nav">THINGS TO DO FRANCE</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <button class="dropbtn">Cities ▼</button>
+            <div class="dropdown-content">
+                <a href="paris.html">Paris</a>
+                <a href="nice.html">Nice</a>
+                <a href="cannes.html">Cannes</a>
+                <a href="marseille.html">Marseille</a>
+                <a href="lyon.html">Lyon</a>
+                <a href="bordeaux.html">Bordeaux</a>
+                <a href="strasbourg.html">Strasbourg</a>
+                <a href="toulouse.html">Toulouse</a>
+                <a href="annecy.html">Annecy</a>
+                <a href="lille.html">Lille</a>
+                <a href="nantes.html">Nantes</a>
+                <a href="montpellier.html">Montpellier</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <h1>Strasbourg 2026</h1>
+    <p>Gothic Grandeur & Picturesque Alsatian Charm</p>
+</header>
+
+<div class="container">
+
+<h2>Top 10 Must-Visit Places in Strasbourg</h2>
+<div class="grid-cards">
+    <div class="card card-place">
+        <h3>Notre-Dame Cathedral</h3>
+        <p>A Gothic masterpiece with a stunning 142m spire and an intricate astronomical clock.</p>
+        <div class="pro-tip">💡 Tip: Climb to the platform for the best panoramic view of the city.</div>
+    </div>
+    <div class="card card-place">
+        <h3>La Petite France</h3>
+        <p>The most picturesque district, famous for its canals and half-timbered houses.</p>
+        <div class="pro-tip">💡 Tip: The "Maison des Tanneurs" is the most iconic photo spot here.</div>
+    </div>
+    <div class="card card-place">
+        <h3>European Parliament</h3>
+        <p>A modern symbol of European democracy and the city's status as a European capital.</p>
+        <div class="pro-tip">💡 Tip: Check for public visit sessions to see the Hemicycle interior.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Palais Rohan</h3>
+        <p>A former royal residence that now houses three of the city’s most important museums.</p>
+        <div class="pro-tip">💡 Tip: Walk the riverfront side of the palace for great architectural views.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Ponts Couverts</h3>
+        <p>Historic defensive bridges with four towers that once guarded the medieval city.</p>
+        <div class="pro-tip">💡 Tip: Head to the nearby Barrage Vauban for an elevated view of the bridges.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Musée Alsacien</h3>
+        <p>A charming museum dedicated to the traditional life, folklore, and crafts of Alsace.</p>
+        <div class="pro-tip">💡 Tip: It’s located in three historic houses connected by wooden balconies.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Place Kléber</h3>
+        <p>The main central square, surrounded by historic buildings and upscale shopping.</p>
+        <div class="pro-tip">💡 Tip: This is where the massive Great Christmas Tree is placed every winter.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Botanical Garden</h3>
+        <p>A peaceful haven belonging to the University, home to thousands of plant species.</p>
+        <div class="pro-tip">💡 Tip: Visit the 19th-century planetarium located right next door.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Modern Art Museum</h3>
+        <p>The MAMCS offers a fantastic collection of modern works and great temporary exhibitions.</p>
+        <div class="pro-tip">💡 Tip: The museum cafe has a terrace with beautiful views of the Ill river.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Christmas Market</h3>
+        <p>The oldest and most famous in France (Christkindelsmärik), transforming the city into a fairy tale.</p>
+        <div class="pro-tip">💡 Tip: Only available in Dec; try the hot spiced wine and "Bredle" cookies.</div>
+    </div>
+</div>
+
+<h2 class="gastro-h2">Top 10 Best Places to Eat in Strasbourg</h2>
+<div class="grid-cards">
+    <div class="card card-gastro">
+        <h3>Buerehiesel</h3>
+        <p>Gourmet cuisine set inside a beautiful 17th-century farmhouse within the Orangerie park.</p>
+        <div class="pro-tip">💰 Price: Luxury. Refined and sophisticated dining.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Cerf</h3>
+        <p>Located just outside in Itterswiller, this Michelin-star spot offers elite Alsatian gastronomy.</p>
+        <div class="pro-tip">💰 Price: Luxury. A perfect destination for a gourmet day trip.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Vignette</h3>
+        <p>Elegant and refined French dishes served in a stylish, welcoming environment.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Perfect for a special dinner.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Clou</h3>
+        <p>A traditional "Winstub" with a modern twist, specializing in hearty local Alsatian dishes.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Very popular, reservation recommended.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Café Bretelles</h3>
+        <p>A trendy bistro with a creative menu and a great selection of local craft beers.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Hip atmosphere and fresh flavors.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Corde à Linge</h3>
+        <p>Located in Petite France, famous for its variety of "Spätzle" and river views.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Great for traditional food without the high price.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Chez Yvonne</h3>
+        <p>A Strasbourg institution! A classic Alsatian restaurant with a cozy, historic interior.</p>
+        <div class="pro-tip">💰 Price: Budget / Mid-range. Favored by presidents and locals alike.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Gruber</h3>
+        <p>Hearty local cuisine served in a beautifully decorated traditional building near the cathedral.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Great for groups and families.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Au Brasseur</h3>
+        <p>An authentic microbrewery offering great "Flammekueche" and house-made beers.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Very lively and local atmosphere.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Pâtisserie Christian</h3>
+        <p>A luxury tea house and pastry shop. Perfect for a refined brunch or afternoon chocolate.</p>
+        <div class="pro-tip">💰 Price: Budget / Mid-range. Exquisite desserts.</div>
+    </div>
+</div>
+
+<h2>Strasbourg Travel Itineraries – 1, 3 & 7 Day Guides</h2>
+
+<div class="itinerary-box">
+    <span class="day-label">⏱️ 1-Day Essentials</span>
+    <h3>Strasbourg in a Day</h3>
+    <p>
+        <strong>09:00:</strong> Notre-Dame Cathedral – Visit the clock and climb the spire.<br>
+        <strong>10:30:</strong> La Petite France – Walk the canals and take iconic photos.<br>
+        <strong>12:30:</strong> Lunch at La Corde à Linge – Try the Choucroute or Spätzle.<br>
+        <strong>14:30:</strong> Palais Rohan – Explore the museum or walk the royal gardens.<br>
+        <strong>16:00:</strong> Barrage Vauban – Panoramic walk and views of the Covered Bridges.<br>
+        <strong>19:00:</strong> Dinner at La Vignette – Contemporary French cuisine.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🥂 Weekend City Break</span>
+    <h3>3 Days: Culture, Art & Europe</h3>
+    <p>
+        <strong>Day 1:</strong> Historic Heart. Cathedral, Petite France, and Palais Rohan. Dinner at Chez Yvonne.<br>
+        <strong>Day 2:</strong> Art & Nature. Alsatian Museum, Modern Art Museum, and the Botanical Garden. Dinner at Café Bretelles.<br>
+        <strong>Day 3:</strong> European Quarter. Tour the Parliament area, Place Kléber shopping, and a farewell gourmet dinner at Buerehiesel.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🏰 7-Day Expert Explorer</span>
+    <h3>The Ultimate Alsace Experience</h3>
+    <p>
+        <strong>Day 1:</strong> Cathedral & Petite France exploration.<br>
+        <strong>Day 2:</strong> Modern Art & University Botanical Gardens.<br>
+        <strong>Day 3:</strong> European Parliament tour and central square shopping.<br>
+        <strong>Day 4:</strong> Excursion: Medieval Alsace. Visit Riquewihr or Eguisheim (day trip).<br>
+        <strong>Day 5:</strong> Alsace Wine Route. Vineyard tastings in Kaysersberg or Ribeauvillé.<br>
+        <strong>Day 6:</strong> Gastronomy Day. Explore local markets, breweries, and traditional winstubs.<br>
+        <strong>Day 7:</strong> Relaxing canal walk and a final luxury dinner at Le Cerf.
+    </p>
+</div>
+
+<div class="booking-section">
+    <h2>Ready to visit Strasbourg?</h2>
+    <p>Find the best accommodation for your 2026 trip:</p>
+    <div class="booking-grid">
+        <div class="booking-card">
+            <h4>Budget Friendly</h4>
+            <p>Ibis Styles or modern hostels near the train station and Krutenau.</p>
+            <a href="#" class="book-btn btn-budget">Check Cheap Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Mid-Range Charm</h4>
+            <p>Half-timbered boutique hotels in the heart of Petite France.</p>
+            <a href="#" class="book-btn btn-mid">Check Best Value Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Luxury Selection</h4>
+            <p>5-star experiences at Maison Rouge or Hotel Regent Petite France.</p>
+            <a href="#" class="book-btn btn-luxury">Check Luxury Hotels</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="cookies.html">Cookies Policy</a>
+    </div>
+    <span class="footer-brand">THINGS TO DO FRANCE</span>
+    <p>© 2026 thingstodofrance.com | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

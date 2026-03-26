@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Do in Annecy 2026 | The Venice of the Alps</title>
+    <meta name="description" content="Discover Annecy 2026: Crystal clear lakes and medieval canals. Top 10 sites, best Fondue spots, and Alpine itineraries.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --bg-dark: #0f172a;
+            --accent-blue: #60a5fa;
+            --accent-gold: #fbbf24;
+            --accent-green: #4ade80;
+            --text-light: #f1f5f9;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body { margin: 0; font-family: 'Roboto', sans-serif; color: var(--text-light); background: var(--bg-dark); line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* --- NAVIGATION --- */
+        nav { 
+            position: fixed; top: 0; width: 100%; height: 70px; 
+            background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); 
+            z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); 
+            display: flex; align-items: center; justify-content: space-between; 
+            padding: 0 5%; box-sizing: border-box; 
+        }
+        .logo-nav { font-family: 'Poppins'; font-weight: 700; color: #fff; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; align-items: center; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent-blue); }
+
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn { background: none; border: none; color: #fff; font-family: inherit; font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 5px; height: 70px; }
+        .dropdown-content { display: none; position: absolute; background-color: #1e293b; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); border-radius: 12px; overflow: hidden; top: 70px; right: 0; border: 1px solid rgba(255,255,255,0.1); }
+        .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
+        .dropdown-content a:hover { background-color: var(--accent-blue); }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        /* --- HERO --- */
+        .hero { 
+            height: 50vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,1)), 
+                        url('https://images.unsplash.com/photo-1594056466093-52bcbc7f5e4b?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+            background-size: cover; 
+            background-position: center; 
+            text-align: center; 
+            padding-top: 70px;
+        }
+        .hero h1 { font-family: 'Poppins'; font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; color: var(--accent-blue); margin-top: 10px; font-weight: 500; }
+        
+        /* --- CONTAINER --- */
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+        h2 { font-family: 'Poppins'; font-size: 2rem; border-left: 5px solid var(--accent-blue); padding-left: 20px; margin: 60px 0 30px; text-transform: uppercase; }
+        .gastro-h2 { border-color: var(--accent-gold); }
+
+        /* --- GRID CARDS --- */
+        .grid-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+        .card { 
+            background: var(--glass); border-radius: 15px; padding: 20px; 
+            border: 1px solid rgba(255,255,255,0.1); transition: 0.4s ease; 
+            display: flex; flex-direction: column; justify-content: space-between; font-size: 0.9rem;
+        }
+        .card-place:hover { border-color: var(--accent-blue); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(96, 165, 250, 0.1); }
+        .card-place h3 { color: var(--accent-blue); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .card-gastro { border: 1px solid rgba(251, 191, 36, 0.1); }
+        .card-gastro:hover { border-color: var(--accent-gold); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(251, 191, 36, 0.1); }
+        .card-gastro h3 { color: var(--accent-gold); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .pro-tip { font-size: 0.8rem; color: #94a3b8; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); font-style: italic; }
+
+        /* --- ITINERARIES --- */
+        .itinerary-box { background: rgba(255, 255, 255, 0.02); border-radius: 20px; padding: 30px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .day-label { color: var(--accent-gold); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; }
+
+        /* --- BOOKING SECTION --- */
+        .booking-section { background: rgba(30, 41, 59, 0.5); border-radius: 20px; padding: 40px; border: 1px solid var(--accent-blue); margin: 80px 0 40px; text-align: center; }
+        .booking-section h2 { border-left: none; padding-left: 0; margin-top: 0; }
+        .booking-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px; }
+        .booking-card { background: rgba(15, 23, 42, 0.5); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); }
+        .booking-card h4 { margin-top: 0; font-family: 'Poppins'; color: #fff; }
+        .book-btn { 
+            display: block; width: 100%; padding: 12px; text-align: center; text-decoration: none; 
+            border-radius: 8px; font-weight: 700; margin-top: 15px; transition: 0.3s; box-sizing: border-box;
+        }
+        .btn-budget { background: var(--accent-green); color: #000; }
+        .btn-mid { background: var(--accent-blue); color: #fff; }
+        .btn-luxury { background: var(--accent-gold); color: #000; }
+        .book-btn:hover { transform: scale(1.03); filter: brightness(1.1); }
+
+        /* --- FOOTER --- */
+        footer { padding: 60px 20px 30px; text-align: center; background: #0f172a; border-top: 1px solid rgba(59, 130, 246, 0.1); color: #94a3b8; }
+        .footer-links { margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .footer-links a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .footer-links a:hover { color: var(--accent-blue); }
+        .footer-brand { font-family: 'Poppins', sans-serif; color: #fff; font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; display: block; }
+
+        @media (max-width: 1100px) { .grid-cards { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .nav-links { display: none; } .grid-cards { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .grid-cards { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo-nav">THINGS TO DO FRANCE</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <button class="dropbtn">Cities ▼</button>
+            <div class="dropdown-content">
+                <a href="paris.html">Paris</a>
+                <a href="nice.html">Nice</a>
+                <a href="cannes.html">Cannes</a>
+                <a href="marseille.html">Marseille</a>
+                <a href="lyon.html">Lyon</a>
+                <a href="bordeaux.html">Bordeaux</a>
+                <a href="strasbourg.html">Strasbourg</a>
+                <a href="toulouse.html">Toulouse</a>
+                <a href="annecy.html">Annecy</a>
+                <a href="lille.html">Lille</a>
+                <a href="nantes.html">Nantes</a>
+                <a href="montpellier.html">Montpellier</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <h1>Annecy 2026</h1>
+    <p>Alpine Magic: Crystal Waters & Medieval Canals</p>
+</header>
+
+<div class="container">
+
+<h2>Top 10 Must-Visit Places in Annecy</h2>
+<div class="grid-cards">
+    <div class="card card-place">
+        <h3>Lake Annecy</h3>
+        <p>One of the cleanest lakes in Europe, offering breathtaking Alpine views and crystal waters.</p>
+        <div class="pro-tip">💡 Tip: Rent a small boat or a paddleboard to truly experience the silence of the lake.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Vieille Ville (Old Town)</h3>
+        <p>A fairy-tale maze of cobblestone streets, colorful houses, and narrow flower-lined canals.</p>
+        <div class="pro-tip">💡 Tip: Visit early in the morning to enjoy the architecture before the crowds arrive.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Palais de l’Isle</h3>
+        <p>An iconic 12th-century "house in the shape of a ship," formerly a prison and courthouse.</p>
+        <div class="pro-tip">💡 Tip: This is the most photographed spot in the city—best shots from the Perrière bridge.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Château d’Annecy</h3>
+        <p>A restored castle overlooking the city, housing a museum of regional art and history.</p>
+        <div class="pro-tip">💡 Tip: The climb is steep, but the terrace offers a perfect panoramic view of the roofs.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Jardins de l’Europe</h3>
+        <p>A lakeside English-style park with ancient trees, perfect for a picnic or a quiet stroll.</p>
+        <div class="pro-tip">💡 Tip: Look for the sundial and the century-old giant sequoias.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Pont des Amours</h3>
+        <p>The "Lover's Bridge," a beautiful iron bridge connecting the gardens to the Pâquier field.</p>
+        <div class="pro-tip">💡 Tip: Legend says if you kiss in the middle, you will stay together forever.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Semnoz Hill</h3>
+        <p>A natural viewpoint offering green trails in summer and snowy slopes in winter.</p>
+        <div class="pro-tip">💡 Tip: Drive to the summit for a 360° view of Mont Blanc on clear days.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Plage d’Albigny</h3>
+        <p>A large, free public beach with grass and shallow waters, ideal for sunbathing and swimming.</p>
+        <div class="pro-tip">💡 Tip: It's the most popular beach, so arrive before noon during July and August.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Saint-Maurice Church</h3>
+        <p>A historic 15th-century Gothic church with impressive architecture and religious art.</p>
+        <div class="pro-tip">💡 Tip: Check for local choir concerts occasionally held inside.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Le Thiou Canal</h3>
+        <p>A picturesque walk along the canal featuring old mills and quiet promenades away from the center.</p>
+        <div class="pro-tip">💡 Tip: Follow the path all the way to Cran-Gevrier for a more local, less touristy vibe.</div>
+    </div>
+</div>
+
+<h2 class="gastro-h2">Top 10 Culinary Stops in Annecy</h2>
+<div class="grid-cards">
+    <div class="card card-gastro">
+        <h3>Le Clos des Sens</h3>
+        <p>A 2-star Michelin powerhouse focusing on lake-to-table cuisine and garden herbs.</p>
+        <div class="pro-tip">💰 Price: Luxury. Booking months in advance is essential.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Table d’Édouard</h3>
+        <p>Sophisticated and elegant French cooking with a strong focus on seasonal Alpine products.</p>
+        <div class="pro-tip">💰 Price: Luxury. Fine dining at its best.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>L’Etage</h3>
+        <p>Creative modern French cuisine served in a stylish second-floor setting in the Old Town.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Excellent flavor combinations.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Bistrot du Port</h3>
+        <p>Fresh Mediterranean-inspired dishes with a prime location overlooking the harbor.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Great for a sunny lunch.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Belvédère</h3>
+        <p>A fantastic restaurant offering high-quality dishes and stunning views of the lake.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Great value for the view.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Freti</h3>
+        <p>The place to go for authentic Savoyard Fondue, Raclette, and Tartiflette.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Expect queues, but it's worth it!</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Chez Mamie Lise</h3>
+        <p>A cozy, traditionally decorated bistro serving classic French Alpine comfort food.</p>
+        <div class="pro-tip">💰 Price: Budget / Mid-range. Very warm atmosphere.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Pizzéria Riva</h3>
+        <p>Delicious thin-crust pizzas and fresh pasta served right next to the canal.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Perfect for families.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Boîte à Sardine</h3>
+        <p>Fresh local market ingredients served in a simple, casual, and tasty way.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Honest and delicious cooking.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Bilboquet</h3>
+        <p>A charming spot for quality sandwiches, artisanal coffee, and light bites in the heart of town.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Perfect for a quick break.</div>
+    </div>
+</div>
+
+<h2>Annecy Travel Itineraries – 1, 3 & 7 Day Guides</h2>
+
+<div class="itinerary-box">
+    <span class="day-label">⏱️ 1-Day Highlights</span>
+    <h3>Annecy's Best in a Day</h3>
+    <p>
+        <strong>09:00:</strong> Old Town Walk – Coffee at Place Sainte-Claire followed by a stroll.<br>
+        <strong>10:30:</strong> Palais de l’Isle – Visit the iconic landmark and the history museum.<br>
+        <strong>12:30:</strong> Lunch at Le Freti – Indulge in an authentic Savoyard Fondue.<br>
+        <strong>14:00:</strong> Lake Annecy Promenade – Walk along the Quai or rent a bike for the shore.<br>
+        <strong>16:00:</strong> Pont des Amours & Gardens – Relax by the water and take photos.<br>
+        <strong>19:00:</strong> Dinner at Le Bistrot du Port – Fresh fish with harbor views.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🥂 Weekend Escape</span>
+    <h3>3 Days: Lakes & Mountains</h3>
+    <p>
+        <strong>Day 1:</strong> Historical Old Town. Palais de l’Isle, Gardens, and dinner at L’Etage.<br>
+        <strong>Day 2:</strong> Peaks & Beaches. Morning hike at Semnoz, afternoon at Albigny Beach. Dinner at Le Belvédère.<br>
+        <strong>Day 3:</strong> Culture & Fine Dining. Visit the Château, take a boat cruise, and a gourmet farewell at La Table d’Édouard.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🏔️ 7-Day Alpine Adventure</span>
+    <h3>The Ultimate Savoyard Week</h3>
+    <p>
+        <strong>Day 1:</strong> Arrival & Old Town exploration.<br>
+        <strong>Day 2:</strong> Hiking day at Semnoz with a summit picnic.<br>
+        <strong>Day 3:</strong> Water sports day. Kayaking or Paddleboarding on the lake.<br>
+        <strong>Day 4:</strong> Alpine Village Day Trip. Visit nearby Talloires or the castle at Duingt.<br>
+        <strong>Day 5:</strong> Local Culture. Visit the Château d’Annecy and the local farmers market.<br>
+        <strong>Day 6:</strong> Relaxation Day. Sunbathing at Albigny Beach and café hopping.<br>
+        <strong>Day 7:</strong> Grand Finale. Luxury dinner at the world-renowned Le Clos des Sens.
+    </p>
+</div>
+
+<div class="booking-section">
+    <h2>Planning your trip to Annecy?</h2>
+    <p>Find the perfect accommodation for your 2026 Alpine stay:</p>
+    <div class="booking-grid">
+        <div class="booking-card">
+            <h4>Budget Friendly</h4>
+            <p>Modern hostels and cozy guesthouses near the train station or Cran-Gevrier.</p>
+            <a href="#" class="book-btn btn-budget">Check Cheap Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Mid-Range Comfort</h4>
+            <p>Boutique hotels inside the Old Town or stylish apartments by the canals.</p>
+            <a href="#" class="book-btn btn-mid">Check Best Value Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Luxury & Spa</h4>
+            <p>5-star experiences at the Imperial Palace or lakefront villas with private docks.</p>
+            <a href="#" class="book-btn btn-luxury">Check Luxury Hotels</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="cookies.html">Cookies Policy</a>
+    </div>
+    <span class="footer-brand">THINGS TO DO FRANCE</span>
+    <p>© 2026 thingstodofrance.com | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

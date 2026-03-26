@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Do in Lille 2026 | Capital of Flanders & French Charm</title>
+    <meta name="description" content="Explore Lille 2026: The gateway to the North. Top 10 attractions, Flemish architecture, and the best places for waffles and mussels.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --bg-dark: #0f172a;
+            --accent-blue: #60a5fa;
+            --accent-gold: #fbbf24;
+            --accent-green: #4ade80;
+            --text-light: #f1f5f9;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body { margin: 0; font-family: 'Roboto', sans-serif; color: var(--text-light); background: var(--bg-dark); line-height: 1.6; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* --- NAVIGATION --- */
+        nav { 
+            position: fixed; top: 0; width: 100%; height: 70px; 
+            background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); 
+            z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); 
+            display: flex; align-items: center; justify-content: space-between; 
+            padding: 0 5%; box-sizing: border-box; 
+        }
+        .logo-nav { font-family: 'Poppins'; font-weight: 700; color: #fff; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; align-items: center; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent-blue); }
+
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn { background: none; border: none; color: #fff; font-family: inherit; font-size: 0.9rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 5px; height: 70px; }
+        .dropdown-content { display: none; position: absolute; background-color: #1e293b; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); border-radius: 12px; overflow: hidden; top: 70px; right: 0; border: 1px solid rgba(255,255,255,0.1); }
+        .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
+        .dropdown-content a:hover { background-color: var(--accent-blue); }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        /* --- HERO --- */
+        .hero { 
+            height: 50vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,1)), 
+                        url('https://images.unsplash.com/photo-1676575927963-07be269f674e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+            background-size: cover; 
+            background-position: center; 
+            text-align: center; 
+            padding-top: 70px;
+        }
+        .hero h1 { font-family: 'Poppins'; font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; color: var(--accent-blue); margin-top: 10px; font-weight: 500; }
+        
+        /* --- CONTAINER --- */
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+        h2 { font-family: 'Poppins'; font-size: 2rem; border-left: 5px solid var(--accent-blue); padding-left: 20px; margin: 60px 0 30px; text-transform: uppercase; }
+        .gastro-h2 { border-color: var(--accent-gold); }
+
+        /* --- GRID CARDS --- */
+        .grid-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+        .card { 
+            background: var(--glass); border-radius: 15px; padding: 20px; 
+            border: 1px solid rgba(255,255,255,0.1); transition: 0.4s ease; 
+            display: flex; flex-direction: column; justify-content: space-between; font-size: 0.9rem;
+        }
+        .card-place:hover { border-color: var(--accent-blue); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(96, 165, 250, 0.1); }
+        .card-place h3 { color: var(--accent-blue); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .card-gastro { border: 1px solid rgba(251, 191, 36, 0.1); }
+        .card-gastro:hover { border-color: var(--accent-gold); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(251, 191, 36, 0.1); }
+        .card-gastro h3 { color: var(--accent-gold); margin-top: 0; font-family: 'Poppins'; font-size: 1.1rem; }
+        .pro-tip { font-size: 0.8rem; color: #94a3b8; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); font-style: italic; }
+
+        /* --- ITINERARIES --- */
+        .itinerary-box { background: rgba(255, 255, 255, 0.02); border-radius: 20px; padding: 30px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .day-label { color: var(--accent-gold); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; }
+
+        /* --- BOOKING SECTION --- */
+        .booking-section { background: rgba(30, 41, 59, 0.5); border-radius: 20px; padding: 40px; border: 1px solid var(--accent-blue); margin: 80px 0 40px; text-align: center; }
+        .booking-section h2 { border-left: none; padding-left: 0; margin-top: 0; }
+        .booking-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px; }
+        .booking-card { background: rgba(15, 23, 42, 0.5); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); }
+        .booking-card h4 { margin-top: 0; font-family: 'Poppins'; color: #fff; }
+        .book-btn { 
+            display: block; width: 100%; padding: 12px; text-align: center; text-decoration: none; 
+            border-radius: 8px; font-weight: 700; margin-top: 15px; transition: 0.3s; box-sizing: border-box;
+        }
+        .btn-budget { background: var(--accent-green); color: #000; }
+        .btn-mid { background: var(--accent-blue); color: #fff; }
+        .btn-luxury { background: var(--accent-gold); color: #000; }
+        .book-btn:hover { transform: scale(1.03); filter: brightness(1.1); }
+
+        /* --- FOOTER --- */
+        footer { padding: 60px 20px 30px; text-align: center; background: #0f172a; border-top: 1px solid rgba(59, 130, 246, 0.1); color: #94a3b8; }
+        .footer-links { margin-bottom: 25px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .footer-links a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .footer-links a:hover { color: var(--accent-blue); }
+        .footer-brand { font-family: 'Poppins', sans-serif; color: #fff; font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; display: block; }
+
+        @media (max-width: 1100px) { .grid-cards { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) { .nav-links { display: none; } .grid-cards { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .grid-cards { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo-nav">THINGS TO DO FRANCE</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <button class="dropbtn">Cities ▼</button>
+            <div class="dropdown-content">
+                <a href="paris.html">Paris</a>
+                <a href="nice.html">Nice</a>
+                <a href="cannes.html">Cannes</a>
+                <a href="marseille.html">Marseille</a>
+                <a href="lyon.html">Lyon</a>
+                <a href="bordeaux.html">Bordeaux</a>
+                <a href="strasbourg.html">Strasbourg</a>
+                <a href="toulouse.html">Toulouse</a>
+                <a href="annecy.html">Annecy</a>
+                <a href="lille.html">Lille</a>
+                <a href="nantes.html">Nantes</a>
+                <a href="montpellier.html">Montpellier</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <h1>Lille 2026</h1>
+    <p>Flemish Elegance Meets French Gastronomy</p>
+</header>
+
+<div class="container">
+
+<h2>Top 10 Must-Visit Places in Lille</h2>
+<div class="grid-cards">
+    <div class="card card-place">
+        <h3>Grand Place</h3>
+        <p>The beating heart of the city, surrounded by magnificent Flemish-style buildings and the Goddess column.</p>
+        <div class="pro-tip">💡 Tip: Grab a coffee on a terrace to enjoy the architectural details.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Vieille Bourse</h3>
+        <p>A 17th-century former exchange building. Now a quiet courtyard for second-hand book sellers.</p>
+        <div class="pro-tip">💡 Tip: Look for the chess players who gather here in the afternoons.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Palais des Beaux-Arts</h3>
+        <p>One of the largest fine arts museums in France, second only to the Louvre in its collection.</p>
+        <div class="pro-tip">💡 Tip: Don't miss the 18th-century relief maps of the city downstairs.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Lille Citadel</h3>
+        <p>Vauban’s "Queen of Citadels," a massive 17th-century star-shaped fortress still used by the military.</p>
+        <div class="pro-tip">💡 Tip: You can walk around the outer ramparts for free.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Parc de la Citadelle</h3>
+        <p>Lille's green lung, featuring a zoo, walking paths, and plenty of space for family picnics.</p>
+        <div class="pro-tip">💡 Tip: Visit the small zoo located right in the park (free for locals!).</div>
+    </div>
+    <div class="card card-place">
+        <h3>Saint-Maurice Church</h3>
+        <p>A beautiful Gothic hall-church located right in the city center with stunning stained glass windows.</p>
+        <div class="pro-tip">💡 Tip: Step inside to escape the busy city noise for a moment of peace.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Rue de Béthune</h3>
+        <p>The main pedestrian shopping street in Lille, full of global brands, cinemas, and street food.</p>
+        <div class="pro-tip">💡 Tip: Great for window shopping and feeling the city's energy.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Marché de Wazemmes</h3>
+        <p>One of the largest and most colorful markets in France, selling everything from exotic spices to local cheese.</p>
+        <div class="pro-tip">💡 Tip: Go on Sunday morning for the best atmosphere and street music.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Natural History Museum</h3>
+        <p>A historic museum with vast collections of zoology and geology, perfect for families.</p>
+        <div class="pro-tip">💡 Tip: It's one of the oldest museums of its kind in the country.</div>
+    </div>
+    <div class="card card-place">
+        <h3>Vieux Lille (Old Town)</h3>
+        <p>The most charming district with cobblestone alleys, high-end boutiques, and historic façades.</p>
+        <div class="pro-tip">💡 Tip: Every corner is a photo opportunity; don't rush through the side streets.</div>
+    </div>
+</div>
+
+<h2 class="gastro-h2">Top 10 Culinary Experiences in Lille</h2>
+<div class="grid-cards">
+    <div class="card card-gastro">
+        <h3>Bloempot</h3>
+        <p>A highly creative "canteen" focusing on local produce and innovative Flemish flavors.</p>
+        <div class="pro-tip">💰 Price: Luxury / Mid. One of the most famous spots in town.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>L’Impératrice</h3>
+        <p>Elegant fine dining offering sophisticated tasting menus in a luxurious setting.</p>
+        <div class="pro-tip">💰 Price: Luxury. Perfect for a special celebration.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Table</h3>
+        <p>An elegant bistro serving refined French dishes with high-quality seasonal ingredients.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Stylish and consistent.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Le Broc</h3>
+        <p>Famous for its modern French cuisine and its specialty: melted cheese dishes!</p>
+        <div class="pro-tip">💰 Price: Mid-range. Excellent value for money.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Chicorée du Palais</h3>
+        <p>Local Flemish food with a gourmet twist, located near the Fine Arts museum.</p>
+        <div class="pro-tip">💰 Price: Mid-range. Traditional and cozy.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Meert</h3>
+        <p>The most iconic pastry shop in Lille. Famous for their vanilla-filled waffles since 1761.</p>
+        <div class="pro-tip">💰 Price: Budget / Mid. A must-visit for any sweet tooth.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Aux Moules de Lille</h3>
+        <p>A classic spot to try the traditional Flemish combination of mussels and fries.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Authentic and bustling.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Chez La Vieille</h3>
+        <p>A cozy "Estaminet" style spot for quick bites, crepes, and local snacks.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Very local atmosphere.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>La Chicorée</h3>
+        <p>A historic brasserie on the square that stays open late, serving classic French fare.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. Great for late-night cravings.</div>
+    </div>
+    <div class="card card-gastro">
+        <h3>Friterie du Marché</h3>
+        <p>The place for real northern fries (frites) and quick snacks at the market.</p>
+        <div class="pro-tip">💰 Price: Budget-friendly. The soul of northern street food.</div>
+    </div>
+</div>
+
+<h2>Lille Travel Itineraries – 1, 3 & 7 Day Guides</h2>
+
+<div class="itinerary-box">
+    <span class="day-label">⏱️ 1-Day Highlights</span>
+    <h3>Essentials of the North</h3>
+    <p>
+        <strong>09:00:</strong> Grand Place – Start with a coffee and the Goddess monument.<br>
+        <strong>10:30:</strong> Vieille Bourse – Explore the booksellers' courtyard.<br>
+        <strong>12:30:</strong> Lunch at Meert or Aux Moules – Waffles or traditional mussels.<br>
+        <strong>14:00:</strong> Palais des Beaux-Arts – Immerse yourself in classic European art.<br>
+        <strong>16:00:</strong> Citadel & Park – A walk around Vauban's star-shaped fortress.<br>
+        <strong>19:00:</strong> Dinner at Le Broc – Modern French food in a lively atmosphere.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🥂 Weekend City Break</span>
+    <h3>3 Days: Culture, Shopping & Gastronomy</h3>
+    <p>
+        <strong>Day 1:</strong> Historical Old Town. Grand Place, Vieille Bourse, and Rue de Béthune. Dinner at La Table.<br>
+        <strong>Day 2:</strong> Art & Museums. Palais des Beaux-Arts, the Natural History Museum, and Vieux Lille. Dinner at La Chicorée du Palais.<br>
+        <strong>Day 3:</strong> Markets & Nature. Citadel walk and a vibrant Sunday at Wazemmes market. Farewell gourmet dinner at Bloempot.
+    </p>
+</div>
+
+<div class="itinerary-box">
+    <span class="day-label">🏙️ 7-Day Explorer</span>
+    <h3>The Ultimate Lille & Flanders Experience</h3>
+    <p>
+        <strong>Day 1:</strong> Grand Place & Old Exchange landmarks.<br>
+        <strong>Day 2:</strong> Art Day. Full immersion in the Palais des Beaux-Arts.<br>
+        <strong>Day 3:</strong> Nature & Parks. Explore the vast Citadel forest and Zoo.<br>
+        <strong>Day 4:</strong> Vieux Lille Discovery. Hidden alleys and upscale shopping.<br>
+        <strong>Day 5:</strong> Market immersion at Wazemmes and local boutique hunting.<br>
+        <strong>Day 6:</strong> Gastronomy focus. Flemish beer tasting and traditional Estaminets.<br>
+        <strong>Day 7:</strong> Farewell. A relaxing final walk and a tasting menu at L’Impératrice.
+    </p>
+</div>
+
+<div class="booking-section">
+    <h2>Planning your stay in Lille?</h2>
+    <p>Find the perfect accommodation for your 2026 trip:</p>
+    <div class="booking-grid">
+        <div class="booking-card">
+            <h4>Budget Friendly</h4>
+            <p>Modern hotels near Lille Flandres or the Wazemmes district.</p>
+            <a href="#" class="book-btn btn-budget">Check Cheap Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Mid-Range Comfort</h4>
+            <p>Boutique hotels in the historic center or near Place Wilson.</p>
+            <a href="#" class="book-btn btn-mid">Check Best Value Hotels</a>
+        </div>
+        <div class="booking-card">
+            <h4>Luxury & Heritage</h4>
+            <p>5-star stays in Grand Hôtels or converted historic mansions.</p>
+            <a href="#" class="book-btn btn-luxury">Check Luxury Hotels</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="cookies.html">Cookies Policy</a>
+    </div>
+    <span class="footer-brand">THINGS TO DO FRANCE</span>
+    <p>© 2026 thingstodofrance.com | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
